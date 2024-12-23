@@ -1,0 +1,78 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<ContentView xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             xmlns:lang="clr-namespace:banditoth.MAUI.Multilanguage;assembly=banditoth.MAUI.Multilanguage"
+             x:Class="DartsApp.Controls.X01Keyboard"
+             x:Name="this">
+    
+    <Grid RowDefinitions="*,*,*,*"
+          ColumnDefinitions="*,*,*">
+        
+        <Button Text="1"
+                Style="{x:StaticResource KeyboardButton}"
+                Command="{Binding ScoreTypedCommand}"
+                CommandParameter="1" />
+        <Button Text="2"
+                Grid.Column="1"
+                Style="{x:StaticResource KeyboardButton}"
+                Command="{Binding ScoreTypedCommand}"
+                CommandParameter="2" />
+        <Button Text="3"
+                Grid.Column="2"
+                Style="{x:StaticResource KeyboardButton}"
+                Command="{Binding ScoreTypedCommand}"
+                CommandParameter="3" />
+
+        <Button Text="4"
+                Grid.Row="1"
+                Style="{x:StaticResource KeyboardButton}"
+                Command="{Binding ScoreTypedCommand}"
+                CommandParameter="4" />
+        <Button Text="5"
+                Grid.Row="1"
+                Grid.Column="1"
+                Style="{x:StaticResource KeyboardButton}"
+                Command="{Binding ScoreTypedCommand}"
+                CommandParameter="5" />
+        <Button Text="6"
+                Grid.Row="1"
+                Grid.Column="2"
+                Style="{x:StaticResource KeyboardButton}"
+                Command="{Binding ScoreTypedCommand}"
+                CommandParameter="6" />
+
+        <Button Text="7"
+                Grid.Row="2"
+                Style="{x:StaticResource KeyboardButton}"
+                Command="{Binding ScoreTypedCommand}"
+                CommandParameter="7" />
+        <Button Text="8"
+                Grid.Row="2"
+                Grid.Column="1"
+                Style="{x:StaticResource KeyboardButton}"
+                Command="{Binding ScoreTypedCommand}"
+                CommandParameter="8" />
+        <Button Text="9"
+                Grid.Row="2"
+                Grid.Column="2"
+                Style="{x:StaticResource KeyboardButton}"
+                Command="{Binding ScoreTypedCommand}"
+                CommandParameter="9" />
+
+        <Button Text="{lang:Translation Delete}"
+                Grid.Row="3"
+                Style="{x:StaticResource KeyboardButton}"
+                Command="{Binding RemoveScoreCommand, Source={x:Reference this}}" />
+        <Button Text="0"
+                Grid.Row="3"
+                Grid.Column="1"
+                Style="{x:StaticResource KeyboardButton}"
+                Command="{Binding ScoreTypedCommand}"
+                CommandParameter="0" />
+        <Button Text="Enter"
+                Grid.Row="3"
+                Grid.Column="2"
+                Style="{x:StaticResource KeyboardButton}"
+                Command="{Binding SubmitScoreCommand, Source={x:Reference this}}" />
+    </Grid>
+</ContentView>

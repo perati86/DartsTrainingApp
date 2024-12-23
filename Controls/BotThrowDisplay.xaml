@@ -1,0 +1,41 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<ContentView xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="DartsApp.Controls.BotThrowDisplay">
+    
+    <Border BackgroundColor="Black">
+        
+        <Grid RowDefinitions="Auto, * ,Auto">
+            
+            <Label Text="{Binding CurrentPlayerName}"
+                   HorizontalOptions="Center" />
+            
+            <HorizontalStackLayout Grid.Row="1"
+                                   HorizontalOptions="Center">
+                
+                <Frame Background="Black"
+                       CornerRadius="20"
+                       BorderColor="White"
+                       HeightRequest="60"
+                       WidthRequest="80">
+                    <Label Text="T19" />
+                </Frame>
+
+                <Frame Background="Black"
+                       CornerRadius="20"
+                       BorderColor="White">
+                    <Label Text="T19" />
+                </Frame>
+
+                <Frame Background="Black"
+                       CornerRadius="20"
+                       BorderColor="White">
+                    <Label Text="T19" />
+                </Frame>
+            </HorizontalStackLayout>
+
+            <Label Text="Throwing dart 1"
+                   Grid.Row="2" />
+        </Grid>
+    </Border>
+</ContentView>

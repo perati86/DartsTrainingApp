@@ -1,4 +1,6 @@
-﻿namespace DartsApp
+﻿using DartsApp.Views;
+
+namespace DartsApp
 {
     public partial class AppShell : Shell
     {

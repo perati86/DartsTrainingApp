@@ -1,0 +1,33 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<mvvm:BaseView xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
+               xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+               xmlns:toolkit="http://schemas.microsoft.com/dotnet/2022/maui/toolkit"
+               xmlns:mvvm="clr-namespace:banditoth.MAUI.MVVM.Entities;assembly=banditoth.MAUI.MVVM"
+               xmlns:controls="clr-namespace:DartsApp.Controls"
+               x:Class="DartsApp.Views.X01GameView"
+               Title="GameView">
+    
+    <Grid RowDefinitions="Auto,*,Auto">
+        
+        <controls:X01ScoreBoard IsDisplayingSets="True"
+                                Players="{Binding PlayerList}" />
+        
+        <VerticalStackLayout VerticalOptions="End"
+                             IsVisible="{Binding IsBotThrowing, Converter={toolkit:InvertedBoolConverter}}"
+                             Grid.Row="1">
+            
+            <controls:CaptionedFrame Caption="{Binding CurrentPlayerName}"
+                                     Value="{Binding CurrentScore}" 
+                                     HorizontalOptions="Start"/>
+        </VerticalStackLayout>
+        
+        <controls:X01Keyboard TypeScoreCommand="{Binding ScoreTypedCommand}"
+                              SubmitScoreCommand="{Binding ScoreSubmittedCommand}"
+                              RemoveScoreCommand="{Binding ScoreRemovedCommand}"
+                              IsEnabled="{Binding IsMatchOver, Converter={toolkit:InvertedBoolConverter}}"
+                              Grid.Row="2"
+                              VerticalOptions="End"
+                              HeightRequest="250"
+                              HorizontalOptions="Fill" />
+    </Grid>
+</mvvm:BaseView>

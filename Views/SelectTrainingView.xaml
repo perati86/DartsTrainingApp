@@ -1,0 +1,37 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<mvvm:BaseView xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
+               xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+               xmlns:mvvm="clr-namespace:banditoth.MAUI.MVVM.Entities;assembly=banditoth.MAUI.MVVM"
+               xmlns:lang="clr-namespace:banditoth.MAUI.Multilanguage;assembly=banditoth.MAUI.Multilanguage"
+               x:Class="DartsApp.Views.SelectTrainingView"
+               Title="SelectTrainingView">
+    
+    <VerticalStackLayout Spacing="10"
+                         Margin="0,100">
+
+        <Label Text="{lang:Translation SelectTrainingView_HeaderText}"
+               FontSize="24"
+               HorizontalOptions="Center"
+               HorizontalTextAlignment="Center"
+               FontAttributes="Bold"
+               TextColor="White"
+               WidthRequest="200"
+               Margin="0,10" />
+
+        <VerticalStackLayout Spacing="20"
+                             Margin="0,30">
+            
+            <Button Text="{lang:Translation SelectTrainingView_Scoring}"
+                    Command="{Binding StartScoringPracticeCommand}"
+                    Style="{x:StaticResource BasicButton}" />
+            
+            <Button Text="{lang:Translation SelectTrainingView_Doubles}"
+                    Command="{Binding StartDoublesPracticeCommand}"
+                    Style="{x:StaticResource BasicButton}" />
+            
+            <Button Text="121"
+                    Command="{Binding Start121PracticeCommand}"
+                    Style="{x:StaticResource BasicButton}" />
+        </VerticalStackLayout>
+    </VerticalStackLayout>
+</mvvm:BaseView>

@@ -1,0 +1,154 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<mvvm:BaseView xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
+               xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+               xmlns:toolkit="http://schemas.microsoft.com/dotnet/2022/maui/toolkit"
+               xmlns:mvvm="clr-namespace:banditoth.MAUI.MVVM.Entities;assembly=banditoth.MAUI.MVVM"
+               xmlns:controls="clr-namespace:DartsApp.Controls"
+               xmlns:entities="clr-namespace:DartsApp.Entities"
+               xmlns:converters="clr-namespace:DartsApp.Converters"
+               xmlns:lang="clr-namespace:banditoth.MAUI.Multilanguage;assembly=banditoth.MAUI.Multilanguage"
+               x:Class="DartsApp.Views.SelectGameView"
+               NavigationPage.HasNavigationBar="False"
+               x:Name="this">
+
+    <Grid RowDefinitions="Auto,*,Auto,Auto,Auto"
+          Margin="0,20"
+          RowSpacing="5">
+        <controls:MultiSelector  DefaultValue="0"
+                                 Values="{Binding GameTypes}"
+                                 SelectedValue="{Binding SelectedGameType}"
+                                 HeightRequest="60"
+                                 Margin="70,0" />
+        <VerticalStackLayout IsVisible="{Binding IsX01Selected}"
+                             Grid.Row="1">
+
+            <controls:MultiSelector DefaultValue="0"
+                                    Values="{Binding InTypes}"
+                                    SelectedValue="{Binding SelectedInType}"
+                                    HeightRequest="50"
+                                    Margin="5,20,5,0" />
+
+            <controls:MultiSelector DefaultValue="1"
+                                    Values="{Binding OutTypes}"
+                                    SelectedValue="{Binding SelectedOutType}"
+                                    HeightRequest="50"
+                                    Margin="5,0" />
+
+        </VerticalStackLayout>
+
+        <controls:MultiSelector IsVisible="{Binding IsX01Selected, Converter={toolkit:InvertedBoolConverter}}"
+                                Grid.Row="1"
+                                VerticalOptions="Center"
+                                DefaultValue="0"
+                                Values="{Binding CricketTypes}"
+                                SelectedValue="{Binding SelectedCricketType}"
+                                HeightRequest="60"
+                                Margin="5,20,5,0" />
+
+        <Grid ColumnDefinitions="*,*,*"
+              HorizontalOptions="Fill"
+              Margin="20,10"
+              Grid.Row="2">
+            <controls:CaptionedSelector IsVisible="{Binding IsX01Selected}"
+                                        Caption="{lang:Translation SelectGameView_Points}"
+                                        Values="{Binding PointOptions}"
+                                        SelectedValue="{Binding SelectedPoints}" />
+            <controls:CaptionedSelector IsVisible="{Binding IsX01Selected, Converter={toolkit:InvertedBoolConverter}}"
+                                        Caption="{lang:Translation SelectGameView_Points}"
+                                        SelectedValue="{Binding SelectedCricketPointType}"
+                                        Values="{Binding CricketPointTypes}" />
+            <controls:CaptionedSelector Caption="{lang:Translation SelectGameView_Sets}"
+                                        SelectedValue="{Binding SelectedSets}"
+                                        Grid.Column="1"
+                                        Values="{Binding SetCounts}" />
+            <controls:CaptionedSelector Caption="{lang:Translation SelectGameView_Legs}"
+                                        SelectedValue="{Binding SelectedLegs}"
+                                        Grid.Column="2"
+                                        Values="{Binding LegCounts}" />
+        </Grid>
+
+        <Frame Background="{x:StaticResource backgroundBrushReversed}"
+               CornerRadius="50"
+               HorizontalOptions="Fill"
+               Margin="25,0"
+               HeightRequest="280"
+               Grid.Row="3">
+            <Grid RowDefinitions="Auto,*">
+                <Grid HorizontalOptions="Fill"
+                      ColumnDefinitions="*,*">
+                    <Label Text="Players"
+                           TextColor="{x:StaticResource Whiteish}"
+                           FontSize="25"
+                           FontFamily="OpenSans-Semibold"
+                           Margin="0,5"
+                           HorizontalOptions="Center" />
+                    <HorizontalStackLayout Grid.Column="1"
+                                           Spacing="5"
+                                           Margin="5,0"
+                                           VerticalOptions="Start"
+                                           HorizontalOptions="End">
+
+                        <Frame WidthRequest="45"
+                               HeightRequest="45"
+                               Background="{x:StaticResource Gray500}"
+                               BorderColor="{x:StaticResource Whiteish}"
+                               CornerRadius="10">
+                            <Image Source="bot.svg"
+                                   WidthRequest="30"
+                                   HeightRequest="30" />
+                            <Frame.GestureRecognizers>
+                                <TapGestureRecognizer Command="{Binding AddBotCommand}" />
+                            </Frame.GestureRecognizers>
+                        </Frame>
+
+                        <Frame WidthRequest="45"
+                               HeightRequest="45"
+                               Background="{x:StaticResource Gray500}"
+                               BorderColor="{x:StaticResource Whiteish}"
+                               CornerRadius="10">
+                            <Image Source="player.svg"
+                                   WidthRequest="30"
+                                   HeightRequest="30" />
+                            <Frame.GestureRecognizers>
+                                <TapGestureRecognizer Command="{Binding AddPlayerCommand}" />
+                            </Frame.GestureRecognizers>
+                        </Frame>
+
+                    </HorizontalStackLayout>
+                </Grid>
+                <Grid Grid.Row="1"
+                      Margin="25,20">
+                    
+                    <ListView ItemsSource="{Binding PlayerList}"
+                              x:Name="PlayerListView">
+                        
+                        <ListView.ItemTemplate>
+                            <DataTemplate>
+                                <ViewCell>
+                                    
+                                    <Label Text="{Binding Name}"
+                                           TextColor="{x:StaticResource Whiteish}"
+                                           FontFamily="OpenSans-Semibold">
+                                        
+                                        <Label.GestureRecognizers>
+                                            <SwipeGestureRecognizer Command="{Binding BindingContext.RemovePlayerCommand, Source={x:Reference this}}"
+                                                                    CommandParameter="{Binding .}"
+                                                                    Direction="Left,Right"
+                                                                    Threshold="100" />
+                                        </Label.GestureRecognizers>
+                                    </Label>
+                                </ViewCell>
+                            </DataTemplate>
+                        </ListView.ItemTemplate>
+                    </ListView>
+                </Grid>
+            </Grid>
+        </Frame>
+
+        <Button Style="{x:StaticResource BasicButton}"
+                Command="{Binding StartGameCommand}"
+                Text="{lang:Translation SelectGameView_Start}"
+                Margin="20,10"
+                Grid.Row="4" />
+    </Grid>
+</mvvm:BaseView>

@@ -1,0 +1,73 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<mopups:PopupPage xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
+                  xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+                  xmlns:mopups="clr-namespace:Mopups.Pages;assembly=Mopups"
+                  xmlns:mopupsanim="clr-namespace:Mopups.Animations;assembly=Mopups"
+                  x:Class="DartsApp.Views.BotThrowPopupView"
+                  Background="#C0000000"
+                  CloseWhenBackgroundIsClicked="False"
+                  x:Name="this">
+    
+    <mopups:PopupPage.Animation>
+        <mopupsanim:MoveAnimation DurationIn="500"
+                                  DurationOut="250"
+                                  PositionIn="Bottom"
+                                  PositionOut="Top" />
+    </mopups:PopupPage.Animation>
+    
+    <Border HeightRequest="200"
+            WidthRequest="300"
+            Background="Black"
+            Stroke="White"
+            StrokeThickness="2">
+        
+        <Border.StrokeShape>
+            <RoundRectangle CornerRadius="40,0,0,40" />
+        </Border.StrokeShape>
+        
+        <Grid RowDefinitions="Auto, *">
+            
+            <Label Text="{Binding CurrentPlayerName}"
+                   HorizontalOptions="Center"
+                   FontSize="17"
+                   TextColor="White"
+                   FontFamily="OpenSans-Semibold"
+                   Margin="0,20,0,0" />
+            
+            <HorizontalStackLayout Grid.Row="1"
+                                   HorizontalOptions="Center"
+                                   Spacing="5">
+                
+                <Frame Background="{Binding BindingContext.BotThrowBackgrounds[0], Source={x:Reference this}}"
+                       CornerRadius="20"
+                       BorderColor="White"
+                       HeightRequest="60"
+                       WidthRequest="80">
+                    
+                    <Label Text="{Binding BindingContext.BotTargets[0], Source={x:Reference this}}"
+                           HorizontalOptions="Center" />
+                </Frame>
+
+                <Frame Background="{Binding BindingContext.BotThrowBackgrounds[1], Source={x:Reference this}}"
+                       CornerRadius="20"
+                       BorderColor="White"
+                       HeightRequest="60"
+                       WidthRequest="80">
+                    
+                    <Label Text="{Binding BindingContext.BotTargets[1], Source={x:Reference this}}"
+                           HorizontalOptions="Center" />
+                </Frame>
+
+                <Frame Background="{Binding BindingContext.BotThrowBackgrounds[2], Source={x:Reference this}}"
+                       CornerRadius="20"
+                       BorderColor="White"
+                       HeightRequest="60"
+                       WidthRequest="80">
+                    
+                    <Label Text="{Binding BindingContext.BotTargets[2], Source={x:Reference this}}"
+                           HorizontalOptions="Center" />
+                </Frame>
+            </HorizontalStackLayout>
+        </Grid>
+    </Border>
+</mopups:PopupPage>

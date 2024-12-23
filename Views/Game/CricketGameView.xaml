@@ -1,0 +1,34 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<mvvm:BaseView xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
+               xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+               xmlns:toolkit="http://schemas.microsoft.com/dotnet/2022/maui/toolkit"
+               xmlns:mvvm="clr-namespace:banditoth.MAUI.MVVM.Entities;assembly=banditoth.MAUI.MVVM"
+               xmlns:controls="clr-namespace:DartsApp.Controls"
+               x:Class="DartsApp.Views.CricketGameView"
+               Title="CricketGameView">
+    
+    <Grid RowDefinitions="Auto,*,Auto">
+        
+        <controls:CricketScoreboard Players="{Binding PlayerList}"
+                                    Sectors="{Binding Sectors}"
+                                    HeightRequest="100"
+                                    VerticalOptions="Start" />
+        
+        <Label Text="{Binding CurrentPlayerName}"
+               HorizontalOptions="Start"
+               VerticalOptions="End"
+               Margin="20"
+               FontSize="20" />
+
+        <controls:CricketKeyboard TypeScoreCommand="{Binding ScoreTypedCommand}"
+                                  SubmitScoreCommand="{Binding ScoreSubmittedCommand}"
+                                  RemoveScoreCommand="{Binding ScoreRemovedCommand}"
+                                  Scores="{Binding CurrentPlayerScores}"
+                                  DisabledSectors="{Binding DisabledSectors}"
+                                  IsEnabled="{Binding IsMatchOver, Converter={toolkit:InvertedBoolConverter}}"
+                                  Grid.Row="2"
+                                  VerticalOptions="End"
+                                  HeightRequest="200"
+                                  HorizontalOptions="Fill" />
+    </Grid>
+</mvvm:BaseView>

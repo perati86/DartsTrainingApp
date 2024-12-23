@@ -1,0 +1,108 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<ContentView xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             xmlns:toolkit="http://schemas.microsoft.com/dotnet/2022/maui/toolkit"
+             xmlns:lang="clr-namespace:banditoth.MAUI.Multilanguage;assembly=banditoth.MAUI.Multilanguage"
+             x:Class="DartsApp.Controls.CricketKeyboard"
+             x:Name="this">
+    
+    <Grid RowDefinitions="*,*,*"
+          ColumnDefinitions="*,*,*"
+          x:Name="container"
+          Background="Black">
+        
+        <Button Text="{Binding Sectors[0]}"
+                Style="{x:StaticResource KeyboardButton}"
+                Command="{Binding ScoreTypedCommand}"
+                CommandParameter="0" />
+        
+        <Label Style="{x:StaticResource CricketCounterLabel}"
+               Text="{Binding Scores[0], StringFormat='{0}x', Source={x:Reference this}}"
+               IsVisible="{Binding Scores[0], Converter={toolkit:IntToBoolConverter}, Source={x:Reference this}}" />
+        
+        <Button Text="{Binding Sectors[1]}"
+                Grid.Column="1"
+                Style="{x:StaticResource KeyboardButton}"
+                Command="{Binding ScoreTypedCommand}"
+                CommandParameter="1" />
+        
+        <Label Style="{x:StaticResource CricketCounterLabel}"
+               Text="{Binding Scores[1], StringFormat='{0}x', Source={x:Reference this}}"
+               IsVisible="{Binding Scores[1], Converter={toolkit:IntToBoolConverter}, Source={x:Reference this}}"
+               Grid.Column="1" />
+        
+        <Button Text="{Binding Sectors[2]}"
+                Grid.Column="2"
+                Style="{x:StaticResource KeyboardButton}"
+                Command="{Binding ScoreTypedCommand}"
+                CommandParameter="2" />
+        
+        <Label Style="{x:StaticResource CricketCounterLabel}"
+               Text="{Binding Scores[2], StringFormat='{0}x', Source={x:Reference this}}"
+               IsVisible="{Binding Scores[2], Converter={toolkit:IntToBoolConverter}, Source={x:Reference this}}"
+               Grid.Column="2" />
+
+        
+        <Button Text="{Binding Sectors[3]}"
+                Grid.Row="1"
+                Style="{x:StaticResource KeyboardButton}"
+                Command="{Binding ScoreTypedCommand}"
+                CommandParameter="3" />
+        
+        <Label Style="{x:StaticResource CricketCounterLabel}"
+               Text="{Binding Scores[3], StringFormat='{0}x', Source={x:Reference this}}"
+               IsVisible="{Binding Scores[3], Converter={toolkit:IntToBoolConverter}, Source={x:Reference this}}"
+               Grid.Row="1" />
+        
+        <Button Text="{Binding Sectors[4]}"
+                Grid.Row="1"
+                Grid.Column="1"
+                Style="{x:StaticResource KeyboardButton}"
+                Command="{Binding ScoreTypedCommand}"
+                CommandParameter="4" />
+        
+        <Label Style="{x:StaticResource CricketCounterLabel}"
+               Text="{Binding Scores[4], StringFormat='{0}x', Source={x:Reference this}}"
+               IsVisible="{Binding Scores[4], Converter={toolkit:IntToBoolConverter}, Source={x:Reference this}}"
+               Grid.Row="1"
+               Grid.Column="1" />
+        
+        <Button Text="{Binding Sectors[5]}"
+                Grid.Row="1"
+                Grid.Column="2"
+                Style="{x:StaticResource KeyboardButton}"
+                Command="{Binding ScoreTypedCommand}"
+                CommandParameter="5" />
+        
+        <Label Style="{x:StaticResource CricketCounterLabel}"
+               Text="{Binding Scores[5], StringFormat='{0}x', Source={x:Reference this}}"
+               IsVisible="{Binding Scores[5], Converter={toolkit:IntToBoolConverter}, Source={x:Reference this}}"
+               Grid.Row="1"
+               Grid.Column="2" />
+
+        
+        <Button Text="{lang:Translation Delete}"
+                Grid.Row="2"
+                Style="{x:StaticResource KeyboardButton}"
+                Command="{Binding RemoveScoreCommand, Source={x:Reference this}}" />
+        
+        <Button Text="{Binding Sectors[6]}"
+                Grid.Row="2"
+                Grid.Column="1"
+                Style="{x:StaticResource KeyboardButton}"
+                Command="{Binding ScoreTypedCommand}"
+                CommandParameter="6" />
+        
+        <Label Style="{x:StaticResource CricketCounterLabel}"
+               Text="{Binding Scores[6], StringFormat='{0}x', Source={x:Reference this}}"
+               IsVisible="{Binding Scores[6], Converter={toolkit:IntToBoolConverter}, Source={x:Reference this}}"
+               Grid.Row="2"
+               Grid.Column="1" />
+        
+        <Button Text="Enter"
+                Grid.Row="2"
+                Grid.Column="2"
+                Style="{x:StaticResource KeyboardButton}"
+                Command="{Binding SubmitScoreCommand, Source={x:Reference this}}" />
+    </Grid>
+</ContentView>

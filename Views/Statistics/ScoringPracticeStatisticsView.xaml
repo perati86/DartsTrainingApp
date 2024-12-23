@@ -1,0 +1,51 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<mvvm:BaseView xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
+               xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+               xmlns:mvvm="clr-namespace:banditoth.MAUI.MVVM.Entities;assembly=banditoth.MAUI.MVVM"
+               xmlns:controls="clr-namespace:DartsApp.Controls"
+               xmlns:lang="clr-namespace:banditoth.MAUI.Multilanguage;assembly=banditoth.MAUI.Multilanguage"
+               x:Class="DartsApp.Views.ScoringPracticeStatisticsView"
+               Title="ScoringPracticeStatisticsView"
+               NavigationPage.HasNavigationBar="False">
+
+    <Grid Margin="10,20,10,0"
+          RowDefinitions="Auto,*"
+          RowSpacing="20">
+
+        <VerticalStackLayout Spacing="10">
+
+            <Label Text="{lang:Translation MainPage_Statistics}"
+                   Style="{x:StaticResource WhiteTitleLabel}" />
+
+            <controls:MultiSelector Values="{Binding DateTypes}"
+                                    SelectedValue="{Binding SelectedDateType}"
+                                    DefaultValue="2"
+                                    HorizontalOptions="Fill"
+                                    Margin="0,10"
+                                    HeightRequest="60" />
+        </VerticalStackLayout>
+
+        <ScrollView Grid.Row="1"
+                    Orientation="Vertical"
+                    VerticalScrollBarVisibility="Never"
+                    VerticalOptions="FillAndExpand">
+
+            <VerticalStackLayout Spacing="30"
+                                 Margin="5,0">
+
+                <controls:StatisticsDisplay Captions="{Binding ScoringCaptions}"
+                                            Values="{Binding T20Values}"
+                                            Title="T20" />
+
+                <controls:StatisticsDisplay Captions="{Binding ScoringCaptions}"
+                                            Values="{Binding T19Values}"
+                                            Title="T19" />
+
+                <controls:StatisticsDisplay Captions="{Binding ScoringCaptions}"
+                                            Values="{Binding T18Values}"
+                                            Title="T18" />
+
+            </VerticalStackLayout>
+        </ScrollView>
+    </Grid>
+</mvvm:BaseView>

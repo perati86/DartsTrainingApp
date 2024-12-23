@@ -1,0 +1,74 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<mvvm:BaseView xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
+               xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+               xmlns:toolkit="http://schemas.microsoft.com/dotnet/2022/maui/toolkit"
+               xmlns:mvvm="clr-namespace:banditoth.MAUI.MVVM.Entities;assembly=banditoth.MAUI.MVVM"
+               xmlns:controls="clr-namespace:DartsApp.Controls"
+               xmlns:lang="clr-namespace:banditoth.MAUI.Multilanguage;assembly=banditoth.MAUI.Multilanguage"
+               x:Class="DartsApp.Views.ScoringPracticeView"
+               NavigationPage.HasNavigationBar="False">
+
+    <Grid RowDefinitions="Auto,*,*,Auto"
+          VerticalOptions="Fill">
+        
+        <Label Text="{Binding CurrentRound, StringFormat='Round {0}/30'}"
+               HorizontalOptions="Center"
+               FontSize="28"
+               FontAttributes="Bold"
+               FontFamily="OpenSans-Semibold"
+               Margin="30" />
+
+        <Frame Grid.Row="1"
+               Background="Black"
+               CornerRadius="20"
+               BorderColor="White"
+               HeightRequest="100"
+               WidthRequest="150">
+            
+            <Label Text="{Binding CurrentTarget}"
+                   HorizontalOptions="Center"
+                   VerticalOptions="Center"
+                   FontSize="24" />
+        </Frame>
+
+        <VerticalStackLayout Grid.Row="2"
+                             VerticalOptions="Start"
+                             Margin="20"
+                             HorizontalOptions="Center">
+            
+            <HorizontalStackLayout Spacing="5">
+                
+                <Label Text="{lang:Translation ScoringPracticeView_Trebles}"
+                       IsVisible="{Binding IsScoringPractice}"
+                       FontSize="20" />
+
+                <Label Text="{lang:Translation ScoringPracticeView_Doubles}"
+                       IsVisible="{Binding IsScoringPractice, Converter={toolkit:InvertedBoolConverter}}"
+                       FontSize="20" />
+
+                <Label Text="{Binding TargetHitPercent, StringFormat='{0}%'}"
+                       FontSize="20" />
+            </HorizontalStackLayout>
+            
+            <HorizontalStackLayout Spacing="5">
+                
+                <Label Text="{lang:Translation ScoringPracticeView_Sectors}"
+                       IsVisible="{Binding IsScoringPractice}"
+                       FontSize="20" />
+
+                <Label Text="{lang:Translation ScoringPracticeView_Misses}"
+                       IsVisible="{Binding IsScoringPractice, Converter={toolkit:InvertedBoolConverter}}"
+                       FontSize="20" />
+                       
+                <Label Text="{Binding SecondHitProperty, StringFormat='{0}%'}"
+                       FontSize="20" />
+            </HorizontalStackLayout>
+
+        </VerticalStackLayout>
+
+        <controls:TargetPracticeKeyboard Grid.Row="3"
+                                         Options="{Binding KeyboardOptions}"
+                                         HeightRequest="160" />
+
+    </Grid>
+</mvvm:BaseView>

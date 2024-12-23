@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<ContentView xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="DartsApp.Controls.CaptionedSelector"
+             x:Name="this">
+    
+    <VerticalStackLayout Spacing="10">
+        
+        <Label Text="{Binding Caption, Source={x:Reference this}}"
+               FontSize="18"
+               FontAttributes="Bold"
+               FontFamily="OpenSans-Semibold"
+               HorizontalOptions="Center"
+               TextColor="{x:StaticResource Whiteish}" />
+        
+        <Button Style="{x:StaticResource SelectedOption}"
+                Text="{Binding SelectedValue, Source={x:Reference this}}"
+                Clicked="Button_Clicked"
+                HorizontalOptions="Fill"
+                HeightRequest="50" />
+    </VerticalStackLayout>
+</ContentView>

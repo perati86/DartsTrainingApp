@@ -1,0 +1,71 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<mopups:PopupPage xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
+                  xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+                  xmlns:mopups="clr-namespace:Mopups.Pages;assembly=Mopups"
+                  xmlns:mopupsanim="clr-namespace:Mopups.Animations;assembly=Mopups"
+                  xmlns:lang="clr-namespace:banditoth.MAUI.Multilanguage;assembly=banditoth.MAUI.Multilanguage"
+                  x:Class="DartsApp.Views.PlayerListView"
+                  Background="#C0000000"
+                  CloseWhenBackgroundIsClicked="True"
+                  x:Name="this">
+    <mopups:PopupPage.Animation>
+        <mopupsanim:MoveAnimation DurationIn="500"
+                                  DurationOut="250"
+                                  PositionIn="Bottom"
+                                  PositionOut="Bottom" />
+    </mopups:PopupPage.Animation>
+    <Border HeightRequest="500"
+            WidthRequest="300"
+            Background="Black"
+            Stroke="White"
+            StrokeThickness="2">
+        <Border.StrokeShape>
+            <RoundRectangle CornerRadius="40,40,40,40" />
+        </Border.StrokeShape>
+        <Grid RowDefinitions="Auto,*,Auto">
+
+            <Label Text="{lang:Translation PlayerListView_Title}"
+                   Style="{x:StaticResource WhiteSubTitleLabel}" 
+                   Margin="20"/>
+            
+            <ScrollView Grid.Row="1">
+                <ListView ItemsSource="{Binding Players}"
+                          SelectedItem="{Binding SelectedPlayer}"
+                          SelectionMode="Single">
+
+                    <ListView.ItemTemplate>
+                        <DataTemplate>
+                            <ViewCell>
+                                <Label Text="{Binding .}"
+                                       TextColor="White"
+                                       FontSize="16"
+                                       VerticalOptions="Center"
+                                       HorizontalOptions="Start"
+                                       Margin="40,0"/>
+                            </ViewCell>
+                        </DataTemplate>
+                    </ListView.ItemTemplate>
+                </ListView>
+            </ScrollView>
+
+            <Grid ColumnDefinitions="*,*"
+                  Grid.Row="2">
+
+                <Button Text="{lang:Translation PlayerListView_Remove}"
+                        Command="{Binding RemovePlayerCommand}"
+                        Style="{x:StaticResource BasicButton}"
+                        Margin="0"
+                        FontSize="14" 
+                        CornerRadius="0"/>
+
+                <Button Text="{lang:Translation PlayerListView_Add}"
+                        Grid.Column="1"
+                        Command="{Binding AddPlayerCommand}"
+                        Style="{x:StaticResource BasicButton}"
+                        Margin="0"
+                        FontSize="14"
+                        CornerRadius="0" />
+            </Grid>
+        </Grid>
+    </Border>
+</mopups:PopupPage>

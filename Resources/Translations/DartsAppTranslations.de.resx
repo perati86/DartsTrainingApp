@@ -1,0 +1,337 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<root>
+  <!-- 
+    Microsoft ResX Schema 
+    
+    Version 2.0
+    
+    The primary goals of this format is to allow a simple XML format 
+    that is mostly human readable. The generation and parsing of the 
+    various data types are done through the TypeConverter classes 
+    associated with the data types.
+    
+    Example:
+    
+    ... ado.net/XML headers & schema ...
+    <resheader name="resmimetype">text/microsoft-resx</resheader>
+    <resheader name="version">2.0</resheader>
+    <resheader name="reader">System.Resources.ResXResourceReader, System.Windows.Forms, ...</resheader>
+    <resheader name="writer">System.Resources.ResXResourceWriter, System.Windows.Forms, ...</resheader>
+    <data name="Name1"><value>this is my long string</value><comment>this is a comment</comment></data>
+    <data name="Color1" type="System.Drawing.Color, System.Drawing">Blue</data>
+    <data name="Bitmap1" mimetype="application/x-microsoft.net.object.binary.base64">
+        <value>[base64 mime encoded serialized .NET Framework object]</value>
+    </data>
+    <data name="Icon1" type="System.Drawing.Icon, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">
+        <value>[base64 mime encoded string representing a byte array form of the .NET Framework object]</value>
+        <comment>This is a comment</comment>
+    </data>
+                
+    There are any number of "resheader" rows that contain simple 
+    name/value pairs.
+    
+    Each data row contains a name, and value. The row also contains a 
+    type or mimetype. Type corresponds to a .NET class that support 
+    text/value conversion through the TypeConverter architecture. 
+    Classes that don't support this are serialized and stored with the 
+    mimetype set.
+    
+    The mimetype is used for serialized objects, and tells the 
+    ResXResourceReader how to depersist the object. This is currently not 
+    extensible. For a given mimetype the value must be set accordingly:
+    
+    Note - application/x-microsoft.net.object.binary.base64 is the format 
+    that the ResXResourceWriter will generate, however the reader can 
+    read any of the formats listed below.
+    
+    mimetype: application/x-microsoft.net.object.binary.base64
+    value   : The object must be serialized with 
+            : System.Runtime.Serialization.Formatters.Binary.BinaryFormatter
+            : and then encoded with base64 encoding.
+    
+    mimetype: application/x-microsoft.net.object.soap.base64
+    value   : The object must be serialized with 
+            : System.Runtime.Serialization.Formatters.Soap.SoapFormatter
+            : and then encoded with base64 encoding.
+
+    mimetype: application/x-microsoft.net.object.bytearray.base64
+    value   : The object must be serialized into a byte array 
+            : using a System.ComponentModel.TypeConverter
+            : and then encoded with base64 encoding.
+    -->
+  <xsd:schema id="root" xmlns="" xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:msdata="urn:schemas-microsoft-com:xml-msdata">
+    <xsd:import namespace="http://www.w3.org/XML/1998/namespace" />
+    <xsd:element name="root" msdata:IsDataSet="true">
+      <xsd:complexType>
+        <xsd:choice maxOccurs="unbounded">
+          <xsd:element name="metadata">
+            <xsd:complexType>
+              <xsd:sequence>
+                <xsd:element name="value" type="xsd:string" minOccurs="0" />
+              </xsd:sequence>
+              <xsd:attribute name="name" use="required" type="xsd:string" />
+              <xsd:attribute name="type" type="xsd:string" />
+              <xsd:attribute name="mimetype" type="xsd:string" />
+              <xsd:attribute ref="xml:space" />
+            </xsd:complexType>
+          </xsd:element>
+          <xsd:element name="assembly">
+            <xsd:complexType>
+              <xsd:attribute name="alias" type="xsd:string" />
+              <xsd:attribute name="name" type="xsd:string" />
+            </xsd:complexType>
+          </xsd:element>
+          <xsd:element name="data">
+            <xsd:complexType>
+              <xsd:sequence>
+                <xsd:element name="value" type="xsd:string" minOccurs="0" msdata:Ordinal="1" />
+                <xsd:element name="comment" type="xsd:string" minOccurs="0" msdata:Ordinal="2" />
+              </xsd:sequence>
+              <xsd:attribute name="name" type="xsd:string" use="required" msdata:Ordinal="1" />
+              <xsd:attribute name="type" type="xsd:string" msdata:Ordinal="3" />
+              <xsd:attribute name="mimetype" type="xsd:string" msdata:Ordinal="4" />
+              <xsd:attribute ref="xml:space" />
+            </xsd:complexType>
+          </xsd:element>
+          <xsd:element name="resheader">
+            <xsd:complexType>
+              <xsd:sequence>
+                <xsd:element name="value" type="xsd:string" minOccurs="0" msdata:Ordinal="1" />
+              </xsd:sequence>
+              <xsd:attribute name="name" type="xsd:string" use="required" />
+            </xsd:complexType>
+          </xsd:element>
+        </xsd:choice>
+      </xsd:complexType>
+    </xsd:element>
+  </xsd:schema>
+  <resheader name="resmimetype">
+    <value>text/microsoft-resx</value>
+  </resheader>
+  <resheader name="version">
+    <value>2.0</value>
+  </resheader>
+  <resheader name="reader">
+    <value>System.Resources.ResXResourceReader, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </resheader>
+  <resheader name="writer">
+    <value>System.Resources.ResXResourceWriter, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </resheader>
+  <assembly alias="System.Windows.Forms" name="System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" />
+	<data name="Average" xml:space="preserve">
+  <value>Durchschnitt</value>
+</data>
+	<data name="Cancel" xml:space="preserve">
+  <value>Abbrechen</value>
+</data>
+	<data name="ChangeLanguage_Title" xml:space="preserve">
+  <value>Sprache wählen</value>
+</data>
+	<data name="CricketStatisticsViewModel_Average" xml:space="preserve">
+  <value>Durchschnitt</value>
+</data>
+	<data name="CricketStatisticsViewModel_Maximum" xml:space="preserve">
+  <value>Maximum</value>
+</data>
+	<data name="CricketStatisticsViewModel_Minimum" xml:space="preserve">
+  <value>Minimum</value>
+</data>
+	<data name="CricketStatisticsView_MarksPerRound" xml:space="preserve">
+  <value>Punkte pro Runde</value>
+</data>
+	<data name="CricketStatisticsView_RoundsToWin" xml:space="preserve">
+  <value>Runden zum Gewinnen</value>
+</data>
+	<data name="CricketType_Classic" xml:space="preserve">
+  <value>Klassisch</value>
+</data>
+	<data name="CricketType_RandomNumbers" xml:space="preserve">
+  <value>Zufallszahlen</value>
+</data>
+	<data name="Delete" xml:space="preserve">
+  <value>Löschen</value>
+</data>
+	<data name="DoubleIn" xml:space="preserve">
+  <value>Double In</value>
+</data>
+	<data name="DoubleOut" xml:space="preserve">
+  <value>Double Out</value>
+</data>
+	<data name="DoublesPracticeViewModel_0s" xml:space="preserve">
+  <value>0er</value>
+</data>
+	<data name="Error_SelectGameViewModel_AddMorePlayers" xml:space="preserve">
+  <value>Füge mindestens einen Spieler hinzu</value>
+</data>
+	<data name="MainPage_HeaderText" xml:space="preserve">
+  <value>Was möchtest du tun?</value>
+</data>
+	<data name="MainPage_NewGame" xml:space="preserve">
+  <value>Neues Spiel</value>
+</data>
+	<data name="MainPage_Statistics" xml:space="preserve">
+  <value>Statistiken</value>
+</data>
+	<data name="MainPage_Training" xml:space="preserve">
+  <value>Training</value>
+</data>
+	<data name="MainViewModel_SelectPlayer" xml:space="preserve">
+  <value>Spieler auswählen</value>
+</data>
+	<data name="MasterIn" xml:space="preserve">
+  <value>Master In</value>
+</data>
+	<data name="MasterOut" xml:space="preserve">
+  <value>Master Out</value>
+</data>
+	<data name="Off" xml:space="preserve">
+  <value>Aus</value>
+</data>
+	<data name="On" xml:space="preserve">
+  <value>An</value>
+</data>
+	<data name="Player" xml:space="preserve">
+  <value>Spieler</value>
+</data>
+	<data name="PlayerListViewModel_NewPlayer_PlaceHolder" xml:space="preserve">
+  <value>Joe</value>
+</data>
+	<data name="PlayerListViewModel_NewPlayer_Text" xml:space="preserve">
+  <value>Neuen Spieler hinzufügen</value>
+</data>
+	<data name="PlayerListViewModel_NewPlayer_Title" xml:space="preserve">
+  <value>Neuer Spieler</value>
+</data>
+	<data name="PlayerListViewModel_WrongName_Text" xml:space="preserve">
+  <value>Ein Spieler mit diesem Namen existiert bereits</value>
+</data>
+	<data name="PlayerListViewModel_WrongName_Title" xml:space="preserve">
+  <value>Falscher Name</value>
+</data>
+	<data name="PlayerListView_Add" xml:space="preserve">
+  <value>Neuen Spieler hinzufügen</value>
+</data>
+	<data name="PlayerListView_Remove" xml:space="preserve">
+  <value>Spieler entfernen</value>
+</data>
+	<data name="PlayerListView_Title" xml:space="preserve">
+  <value>Spieler</value>
+</data>
+	<data name="Practice121View_Checkout" xml:space="preserve">
+  <value>Checkout</value>
+</data>
+	<data name="Practice121View_Checkpoint" xml:space="preserve">
+  <value>Checkpoint</value>
+</data>
+	<data name="Practice121View_Round" xml:space="preserve">
+  <value>Runde</value>
+</data>
+	<data name="Practice121View_Score" xml:space="preserve">
+  <value>Punktzahl</value>
+</data>
+	<data name="ScoringPracticeViewModel_Congratulations" xml:space="preserve">
+  <value>Herzlichen Glückwunsch</value>
+</data>
+	<data name="ScoringPracticeViewModel_Double" xml:space="preserve">
+  <value>Doppel</value>
+</data>
+	<data name="ScoringPracticeViewModel_FinishedTraining" xml:space="preserve">
+  <value>Du hast das Training abgeschlossen!</value>
+</data>
+	<data name="ScoringPracticeViewModel_Sector" xml:space="preserve">
+  <value>Sektor</value>
+</data>
+	<data name="ScoringPracticeViewModel_Single" xml:space="preserve">
+  <value>Einzeln</value>
+</data>
+	<data name="ScoringPracticeViewModel_Triple" xml:space="preserve">
+  <value>Triple</value>
+</data>
+	<data name="ScoringPracticeView_Doubles" xml:space="preserve">
+  <value>Doppelte: </value>
+</data>
+	<data name="ScoringPracticeView_Misses" xml:space="preserve">
+  <value>Verfehlungen: </value>
+</data>
+	<data name="ScoringPracticeView_Sectors" xml:space="preserve">
+  <value>Sektoren: </value>
+</data>
+	<data name="ScoringPracticeView_Trebles" xml:space="preserve">
+  <value>Triples: </value>
+</data>
+	<data name="SelectGameViewModel_AddPlayer" xml:space="preserve">
+  <value>Spieler hinzufügen</value>
+</data>
+	<data name="SelectGameView_Legs" xml:space="preserve">
+  <value>Beine</value>
+</data>
+	<data name="SelectGameView_Points" xml:space="preserve">
+  <value>Punkte</value>
+</data>
+	<data name="SelectGameView_Sets" xml:space="preserve">
+  <value>Sätze</value>
+</data>
+	<data name="SelectGameView_Start" xml:space="preserve">
+  <value>Start</value>
+</data>
+	<data name="SelectTrainingView_Doubles" xml:space="preserve">
+  <value>Doppelte</value>
+</data>
+	<data name="SelectTrainingView_HeaderText" xml:space="preserve">
+  <value>Was möchtest du üben?</value>
+</data>
+	<data name="SelectTrainingView_Scoring" xml:space="preserve">
+  <value>Punkte</value>
+</data>
+	<data name="StraightIn" xml:space="preserve">
+  <value>Gerade In</value>
+</data>
+	<data name="StraightOut" xml:space="preserve">
+  <value>Gerade Out</value>
+</data>
+	<data name="X01GameViewModel_CheckoutDartsUsed" xml:space="preserve">
+  <value>Verwendete Checkout-Darts</value>
+</data>
+	<data name="X01GameViewModel_DartsUsed" xml:space="preserve">
+  <value>Verwendete Darts</value>
+</data>
+	<data name="X01GameViewModel_WrongScorePopup_Text" xml:space="preserve">
+  <value>Diese Punktzahl ist ungültig</value>
+</data>
+	<data name="X01GameViewModel_WrongScorePopup_Title" xml:space="preserve">
+  <value>Falsche Punktzahl</value>
+</data>
+	<data name="X01StatisticsViewModel_3DartAverage" xml:space="preserve">
+  <value>Durchschnitt von 3 Darts</value>
+</data>
+	<data name="X01StatisticsViewModel_9DartAverage" xml:space="preserve">
+  <value>Durchschnitt der ersten 9 Darts</value>
+</data>
+	<data name="X01StatisticsViewModel_BestLeg" xml:space="preserve">
+  <value>Beste Runde</value>
+</data>
+	<data name="X01StatisticsViewModel_HighestCheckout" xml:space="preserve">
+  <value>Höchstes Checkout</value>
+</data>
+	<data name="X01StatisticsViewModel_HighestScore" xml:space="preserve">
+  <value>Höchste Punktzahl</value>
+</data>
+	<data name="X01StatisticsViewModel_LegsWon" xml:space="preserve">
+  <value>Gewonnene Runden</value>
+</data>
+	<data name="X01StatisticsViewModel_Monthly" xml:space="preserve">
+  <value>Monatlich</value>
+</data>
+	<data name="X01StatisticsViewModel_Total" xml:space="preserve">
+  <value>Gesamt</value>
+</data>
+	<data name="X01StatisticsViewModel_Weekly" xml:space="preserve">
+  <value>Wöchentlich</value>
+</data>
+	<data name="X01StatisticsView_BigThrows" xml:space="preserve">
+  <value>Große Würfe</value>
+</data>
+	<data name="X01StatisticsView_Checkout" xml:space="preserve">
+  <value>Checkout</value>
+</data>
+</root>

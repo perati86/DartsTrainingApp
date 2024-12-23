@@ -1,0 +1,46 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<mvvm:BaseView xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
+               xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+               xmlns:mvvm="clr-namespace:banditoth.MAUI.MVVM.Entities;assembly=banditoth.MAUI.MVVM"
+               xmlns:lang="clr-namespace:banditoth.MAUI.Multilanguage;assembly=banditoth.MAUI.Multilanguage"
+               x:Class="DartsApp.Views.SelectStatisticsView"
+               NavigationPage.HasNavigationBar="False">
+    
+    <VerticalStackLayout Spacing="10"
+                         Margin="0,100,0,0">
+
+        <Label Text="{Binding Player.Name, StringFormat='Select statistics type, {0}!'}"
+               FontSize="24"
+               HorizontalOptions="Center"
+               HorizontalTextAlignment="Center"
+               FontAttributes="Bold"
+               TextColor="White"
+               WidthRequest="180"
+               Margin="0,10" />
+
+        <VerticalStackLayout Spacing="20"
+                             Margin="0,30">
+
+            <Button Text="X01"
+                    Command="{Binding OpenX01StatisticsCommand}"
+                    Style="{x:StaticResource BasicButton}" />
+
+            <Button Text="Cricket"
+                    Command="{Binding OpenCricketStatisticsCommand}"
+                    Style="{x:StaticResource BasicButton}" />
+
+            <Button Text="{lang:Translation SelectTrainingView_Scoring}"
+                    Command="{Binding OpenScoringStatisticsCommand}"
+                    Style="{x:StaticResource BasicButton}" />
+
+            <Button Text="{lang:Translation SelectTrainingView_Doubles}"
+                    Command="{Binding OpenDoublesStatisticsCommand}"
+                    Style="{x:StaticResource BasicButton}" />
+
+            <Button Text="121"
+                    Command="{Binding Open121StatisticsCommand}"
+                    Style="{x:StaticResource BasicButton}" />
+        </VerticalStackLayout>
+    </VerticalStackLayout>
+
+</mvvm:BaseView>

@@ -1,0 +1,50 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<mvvm:BaseView xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
+               xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+               xmlns:mvvm="clr-namespace:banditoth.MAUI.MVVM.Entities;assembly=banditoth.MAUI.MVVM"
+               xmlns:controls="clr-namespace:DartsApp.Controls"
+               xmlns:lang="clr-namespace:banditoth.MAUI.Multilanguage;assembly=banditoth.MAUI.Multilanguage"
+               x:Class="DartsApp.Views.Practice121View"
+               Title="Practice121View"
+               NavigationPage.HasNavigationBar="False">
+    
+    <Grid RowDefinitions="*,Auto,Auto,Auto"
+          Margin="0,25,0,0">
+        
+        <Grid ColumnDefinitions="*,*,*"
+              VerticalOptions="Start">
+
+            <controls:CaptionedFrame Caption="{lang:Translation Practice121View_Checkpoint}"
+                                     Value="{Binding Checkpoint}" />
+
+            <controls:CaptionedFrame Caption="{lang:Translation Practice121View_Checkout}"
+                                     Value="{Binding Checkout}"
+                                     Grid.Column="1" />
+
+            <controls:CaptionedFrame Caption="{lang:Translation Practice121View_Score}"
+                                     Value="{Binding Player.CurrentPoints}"
+                                     Grid.Column="2" />
+        </Grid>
+
+        <Label Text="{Binding CurrentRound, StringFormat='Round {0}/3'}"
+               Grid.Row="1"
+               HorizontalOptions="Center"
+               TextColor="White"
+               FontSize="20"
+               FontAttributes="Bold"
+               FontFamily="OpenSans-Semibold"
+               Margin="30" />
+
+        <controls:CaptionedFrame Caption="{Binding Player.Name}"
+                                 Value="{Binding CurrentScore}"
+                                 Grid.Row="2" />
+
+        <controls:X01Keyboard TypeScoreCommand="{Binding ScoreTypedCommand}"
+                              SubmitScoreCommand="{Binding ScoreSubmittedCommand}"
+                              RemoveScoreCommand="{Binding ScoreRemovedCommand}"
+                              Grid.Row="3"
+                              VerticalOptions="End"
+                              HeightRequest="250"
+                              HorizontalOptions="Fill" />
+    </Grid>
+</mvvm:BaseView>

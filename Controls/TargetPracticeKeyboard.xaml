@@ -1,0 +1,46 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<ContentView xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             xmlns:toolkit="http://schemas.microsoft.com/dotnet/2022/maui/toolkit"
+             xmlns:lang="clr-namespace:banditoth.MAUI.Multilanguage;assembly=banditoth.MAUI.Multilanguage"
+             x:Class="DartsApp.Controls.TargetPracticeKeyboard"
+             x:Name="this">
+    
+    <Grid RowDefinitions="*,*"
+      ColumnDefinitions="*,*"
+      x:Name="container"
+      Background="Black">
+        
+    <Button Text="{Binding Options[0], Source={x:Reference this}}"
+            Style="{x:StaticResource KeyboardButton}"
+            Command="{Binding ScoreTypedCommand}"
+            CommandParameter="0" />
+        
+    <Label Style="{x:StaticResource CricketCounterLabel}"
+           Text="{Binding CurrentScores[0], StringFormat='{0}x'}"
+           IsVisible="{Binding CurrentScores[0], Converter={toolkit:IntToBoolConverter}}" />
+        
+    <Button Text="{Binding Options[1], Source={x:Reference this}}"
+            Grid.Column="1"
+            Style="{x:StaticResource KeyboardButton}"
+            Command="{Binding ScoreTypedCommand}"
+            CommandParameter="1" />
+        
+    <Label Style="{x:StaticResource CricketCounterLabel}"
+           Text="{Binding CurrentScores[1], StringFormat='{0}x'}"
+           IsVisible="{Binding CurrentScores[1], Converter={toolkit:IntToBoolConverter}}"
+           Grid.Column="1" />
+
+        
+    <Button Text="Delete"
+            Grid.Row="1"
+            Style="{x:StaticResource KeyboardButton}"
+            Command="{Binding RemoveScoreCommand}" />
+        
+    <Button Text="Enter"
+            Grid.Row="1"
+            Grid.Column="1"
+            Style="{x:StaticResource KeyboardButton}"
+            Command="{Binding SubmitScoreCommand}" />
+</Grid>
+</ContentView>
