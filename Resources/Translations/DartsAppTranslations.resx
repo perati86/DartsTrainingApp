@@ -159,8 +159,11 @@
   <data name="DoublesPracticeViewModel_0s" xml:space="preserve">
     <value>0's</value>
   </data>
+  <data name="Error_Title" xml:space="preserve">
+    <value>Error</value>
+  </data>
   <data name="Error_SelectGameViewModel_AddMorePlayers" xml:space="preserve">
-    <value>Add at lease one player</value>
+    <value>Add at least one player</value>
   </data>
   <data name="MainPage_HeaderText" xml:space="preserve">
     <value>What would you like to do?</value>

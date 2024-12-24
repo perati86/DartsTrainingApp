@@ -1,8 +1,8 @@
 namespace DartsApp.Controls;
 
-public partial class CaptionedFrame : ContentView
+public partial class CaptionedBorder : ContentView
 {
-	public CaptionedFrame()
+	public CaptionedBorder()
 	{
 		InitializeComponent();
 	}

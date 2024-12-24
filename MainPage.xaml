@@ -18,39 +18,43 @@
                          HeightRequest="40"
                          WidthRequest="64"/>
             
-            <Frame WidthRequest="50"
+            <Border WidthRequest="50"
                    HeightRequest="50"
                    HorizontalOptions="End"
                    Grid.Column="1"
                    Background="{x:StaticResource Gray500}"
-                   BorderColor="{x:StaticResource Whiteish}"
-                   CornerRadius="10">
-                
-                <Image Source="player.svg"
+                   Stroke="White">
+
+                <Image Source="player.png"
                        WidthRequest="35"
                        HeightRequest="35" />
-                
-                <Frame.GestureRecognizers>
+
+                <Border.StrokeShape>
+                    <RoundRectangle CornerRadius="10" />
+                </Border.StrokeShape>
+
+                <Border.GestureRecognizers>
                     <TapGestureRecognizer Command="{Binding OpenPlayerListCommand}" />
-                </Frame.GestureRecognizers>
-            </Frame>
+                </Border.GestureRecognizers>
+            </Border>
         </Grid>
 
         <VerticalStackLayout Spacing="10"
                              Margin="0,60,0,0"
                              Grid.Row="1">
 
-            <Image Source="darts_icon.svg"
+            <Image Source="darts_icon.png"
                    WidthRequest="90"
                    HeightRequest="90" />
             
             <Label Text="{lang:Translation MainPage_HeaderText}"
                    FontSize="24"
-                   HorizontalOptions="Center"
+                   HorizontalOptions="CenterAndExpand"
                    HorizontalTextAlignment="Center"
                    FontAttributes="Bold"
                    TextColor="White"
                    WidthRequest="180"
+                   HeightRequest="60"
                    Margin="0,10" />
 
             <VerticalStackLayout Spacing="20"

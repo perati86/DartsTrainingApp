@@ -6,10 +6,13 @@ using CommunityToolkit.Mvvm.Input;
 using DartsApp.Entities.DTO;
 using DartsApp.Interfaces;
 using DartsApp.Services;
+using DartsApp.Views;
 using Microsoft.EntityFrameworkCore;
+using Mopups.Services;
 using System;
 using System.Collections.Generic;
 using System.Collections.ObjectModel;
+using System.Diagnostics;
 using System.Linq;
 using System.Text;
 using System.Text.Json;
@@ -39,7 +42,7 @@ namespace DartsApp.ViewModels
 
         public void Initialize()
         {
-            Players = string.IsNullOrEmpty(_persistentStorage.PlayerList) ? [] : JsonSerializer.Deserialize<ObservableCollection<string>>(_persistentStorage.PlayerList);
+            Players = string.IsNullOrEmpty(_persistentStorage.PlayerList) ? new ObservableCollection<string>() : JsonSerializer.Deserialize<ObservableCollection<string>>(_persistentStorage.PlayerList);
         }
 
         [RelayCommand]
@@ -60,24 +63,35 @@ namespace DartsApp.ViewModels
         [RelayCommand]
         private async Task AddPlayer()
         {
-            var playerName = await Application.Current.MainPage.DisplayPromptAsync(_translator.GetTranslation("PlayerListViewModel_NewPlayer_Title"),
-                    _translator.GetTranslation("PlayerListViewModel_NewPlayer_Text"),
-                    placeholder: _translator.GetTranslation("PlayerListViewModel_NewPlayer_PlaceHolder"));
-
-            if (string.IsNullOrWhiteSpace(playerName))
-                return;
-
-            if (Players.Contains(playerName))
+            try
             {
-                await Application.Current.MainPage.DisplayAlert(_translator.GetTranslation("PlayerListViewModel_WrongName_Title"),
-                    _translator.GetTranslation("PlayerListViewModel_WrongName_Text"), "OK");
+                var playerName = await MopupService.Instance.PopupStack[MopupService.Instance.PopupStack.Count - 1]
+                    .DisplayPromptAsync(_translator.GetTranslation("PlayerListViewModel_NewPlayer_Title"),
+                        _translator.GetTranslation("PlayerListViewModel_NewPlayer_Text"),
+                        placeholder: _translator.GetTranslation("PlayerListViewModel_NewPlayer_PlaceHolder"));
 
-                return;
+                if (string.IsNullOrWhiteSpace(playerName))
+                    return;
+
+                if (Players.Contains(playerName))
+                {
+                    await MopupService.Instance.PopupStack[MopupService.Instance.PopupStack.Count - 1]
+                        .DisplayAlert(_translator.GetTranslation("PlayerListViewModel_WrongName_Title"),
+                        _translator.GetTranslation("PlayerListViewModel_WrongName_Text"), "OK");
+
+                    return;
+                }
+
+                Players.Add(playerName);
+
+                UpdateStorage();
             }
 
-            Players.Add(playerName);
-
-            UpdateStorage();
+            catch (Exception ex)
+            {
+                Debug.WriteLine(ex.Message);
+            }
+            
         }
 
         private void UpdateStorage()

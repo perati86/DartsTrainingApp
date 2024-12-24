@@ -156,7 +156,7 @@ namespace DartsApp.ViewModels
             {
                 if (PlayerList.Count < 1)
                 {
-                    await Application.Current.MainPage.DisplayAlert("Error", _translator.GetTranslation("Error_SelectGameViewModel_AddMorePlayers"), "OK");
+                    await Application.Current.MainPage.DisplayAlert(_translator.GetTranslation("Error_Title"), _translator.GetTranslation("Error_SelectGameViewModel_AddMorePlayers"), "OK");
                     return;
                 }
 

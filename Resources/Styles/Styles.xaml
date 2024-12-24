@@ -13,6 +13,7 @@
         <Setter Property="Padding" Value="20" />
         <Setter Property="CornerRadius" Value="30" />
         <Setter Property="BorderColor" Value="White" />
+        <Setter Property="BorderWidth" Value="1" />
         <Setter Property="TextColor" Value="White" />
         <Setter Property="FontSize" Value="18" />
     </Style>
@@ -21,7 +22,7 @@
         <Setter Property="BorderWidth" Value="1" />
         <Setter Property="CornerRadius" Value="10" />
         <Setter Property="HorizontalOptions" Value="Fill" />
-        <Setter Property="Margin" Value="0" />
+        <Setter Property="Margin" Value="1" />
         <Setter Property="FontAttributes" Value="Bold" />
         <Setter Property="FontSize" Value="20" />
     </Style>

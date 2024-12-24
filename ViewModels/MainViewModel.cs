@@ -10,6 +10,7 @@ using DartsApp.Views;
 using Mopups.Services;
 using System;
 using System.Collections.Generic;
+using System.Collections.ObjectModel;
 using System.Globalization;
 using System.Linq;
 using System.Text;
@@ -51,7 +52,13 @@ namespace DartsApp.ViewModels
         [RelayCommand]
         private async Task StartTraining()
         {
-            var playerList = JsonSerializer.Deserialize<string[]>(_persistentStorage.PlayerList);
+            var playerList = string.IsNullOrEmpty(_persistentStorage.PlayerList) ? null : JsonSerializer.Deserialize<string[]>(_persistentStorage.PlayerList);
+
+            if (playerList is null)
+            {
+                await Application.Current.MainPage.DisplayAlert(_translator.GetTranslation("Error_Title"), _translator.GetTranslation("Error_SelectGameViewModel_AddMorePlayers"), "OK");
+                return;
+            }
 
             var playerName = await Application.Current.MainPage.DisplayActionSheet(_translator.GetTranslation("MainViewModel_SelectPlayer"),
                 _translator.GetTranslation("Cancel"), null, playerList);
@@ -68,7 +75,13 @@ namespace DartsApp.ViewModels
         [RelayCommand]
         private async Task OpenStatistics()
         {
-            var playerList = JsonSerializer.Deserialize<string[]>(_persistentStorage.PlayerList);
+            var playerList = string.IsNullOrEmpty(_persistentStorage.PlayerList) ? null : JsonSerializer.Deserialize<string[]>(_persistentStorage.PlayerList);
+
+            if (playerList is null)
+            {
+                await Application.Current.MainPage.DisplayAlert(_translator.GetTranslation("Error_Title"), _translator.GetTranslation("Error_SelectGameViewModel_AddMorePlayers"), "OK");
+                return;
+            }
 
             var playerName = await Application.Current.MainPage.DisplayActionSheet(_translator.GetTranslation("MainViewModel_SelectPlayer"),
                 _translator.GetTranslation("Cancel"), null, playerList);

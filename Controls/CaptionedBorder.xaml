@@ -1,7 +1,7 @@
-<?xml version="1.0" encoding="utf-8" ?>
+﻿<?xml version="1.0" encoding="utf-8" ?>
 <ContentView xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
              xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
-             x:Class="DartsApp.Controls.CaptionedFrame"
+             x:Class="DartsApp.Controls.CaptionedBorder"
              x:Name="this">
 
     <Grid RowDefinitions="*,*"
@@ -15,15 +15,13 @@
                FontSize="16"
                FontAttributes="Bold" />
 
-        <Frame Grid.Row="1"
+        <Border Grid.Row="1"
                HorizontalOptions="Start"
                VerticalOptions="End"
                Background="{StaticResource Gray600}"
                Opacity="0.5"
-               HasShadow="True"
                Margin="10,20"
-               CornerRadius="15"
-               BorderColor="White"
+               Stroke="White"
                HeightRequest="60"
                WidthRequest="100">
 
@@ -31,7 +29,13 @@
                    TextColor="{x:StaticResource Whiteish}"
                    FontSize="16"
                    HorizontalTextAlignment="Center"
+                   HorizontalOptions="Center"
+                   VerticalOptions="Center"
                    FontFamily="OpenSans-Semibold" />
-        </Frame>
+
+            <Border.StrokeShape>
+                <RoundRectangle CornerRadius="15" />
+            </Border.StrokeShape>
+        </Border>
     </Grid>
 </ContentView>

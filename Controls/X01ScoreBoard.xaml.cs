@@ -43,10 +43,10 @@ public partial class X01ScoreBoard : ContentView
         {
             ITranslator _translator = IPlatformApplication.Current?.Services.GetService<ITranslator>();
 
-            scoreBoard.container.RowDefinitions.Add(new RowDefinition(GridLength.Star));
+            scoreBoard.container.RowDefinitions.Add(new RowDefinition(40));
 
             scoreBoard.container.ColumnDefinitions = new ColumnDefinitionCollection(
-                new ColumnDefinition(new GridLength(2, GridUnitType.Star)),
+                new ColumnDefinition(GridLength.Auto),
                 new ColumnDefinition(GridLength.Star),
                 new ColumnDefinition(GridLength.Star),
                 new ColumnDefinition(GridLength.Star));
@@ -74,7 +74,7 @@ public partial class X01ScoreBoard : ContentView
 
             for (int i = 0; i < scoreBoard.Players.Count(); i++)
             {
-                scoreBoard.container.RowDefinitions.Add(new RowDefinition(GridLength.Star));
+                scoreBoard.container.RowDefinitions.Add(new RowDefinition(40));
 
                 var currentPlayer = scoreBoard.Players.ElementAt(i);
 
@@ -86,7 +86,7 @@ public partial class X01ScoreBoard : ContentView
 
                 nameLabel.HorizontalTextAlignment = TextAlignment.Start;
                 nameLabel.HorizontalOptions = LayoutOptions.Start;
-                nameLabel.Padding = 5;
+                nameLabel.Padding = new Thickness(5, 0);
 
                 setsLabel.SetBinding(Label.TextProperty, $"PlayerList[{i}].Sets");
                 legsLabel.SetBinding(Label.TextProperty, $"PlayerList[{i}].Legs");

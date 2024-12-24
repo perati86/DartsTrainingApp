@@ -1,4 +1,5 @@
-﻿using CommunityToolkit.Mvvm.ComponentModel;
+﻿using banditoth.MAUI.Multilanguage.Interfaces;
+using CommunityToolkit.Mvvm.ComponentModel;
 using CommunityToolkit.Mvvm.Input;
 using DartsApp.Entities;
 using DartsApp.Entities.DTO;
@@ -19,7 +20,9 @@ namespace DartsApp.ViewModels
 {
     public partial class CricketGameViewModel : GameViewModel
     {
+        private readonly ITranslator _translator;
         private readonly DbDataContext _dbDataContext;
+
         private int[] DartsTable = [20, 1, 18, 4, 13, 6, 10, 15, 2, 17, 3, 19, 7, 16, 8, 11, 14, 9, 12, 5];
 
         [ObservableProperty]
@@ -57,8 +60,9 @@ namespace DartsApp.ViewModels
 
         public string CurrentPlayerName => PlayerList?.Any() == true ? PlayerList[CurrentPlayerIndex].Name : "";
 
-        public CricketGameViewModel(DbDataContext dbDataContext)
+        public CricketGameViewModel(ITranslator translator, DbDataContext dbDataContext)
         {
+            _translator = translator;
             _dbDataContext = dbDataContext;
 
             PropertyChanged += CricketGameViewModel_PropertyChanged;
@@ -271,7 +275,7 @@ namespace DartsApp.ViewModels
             }
             catch (Exception ex)
             {
-                await Application.Current.MainPage.DisplayAlert("Error", ex.Message + ex.StackTrace, "OK");
+                await Application.Current.MainPage.DisplayAlert(_translator.GetTranslation("Error_Title"), ex.Message + ex.StackTrace, "OK");
             }
         }
 

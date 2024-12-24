@@ -1,17 +1,15 @@
-<?xml version="1.0" encoding="utf-8" ?>
+﻿<?xml version="1.0" encoding="utf-8" ?>
 <mvvm:BaseView xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
                xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
                xmlns:toolkit="http://schemas.microsoft.com/dotnet/2022/maui/toolkit"
                xmlns:mvvm="clr-namespace:banditoth.MAUI.MVVM.Entities;assembly=banditoth.MAUI.MVVM"
                xmlns:controls="clr-namespace:DartsApp.Controls"
-               xmlns:entities="clr-namespace:DartsApp.Entities"
-               xmlns:converters="clr-namespace:DartsApp.Converters"
                xmlns:lang="clr-namespace:banditoth.MAUI.Multilanguage;assembly=banditoth.MAUI.Multilanguage"
                x:Class="DartsApp.Views.SelectGameView"
-               NavigationPage.HasNavigationBar="False"
+               NavigationPage.HasNavigationBar="{OnPlatform Android=false, Default=true}"
                x:Name="this">
 
-    <Grid RowDefinitions="Auto,*,Auto,Auto,Auto"
+    <Grid RowDefinitions="Auto,Auto,Auto,*,Auto"
           Margin="0,20"
           RowSpacing="5">
         <controls:MultiSelector  DefaultValue="0"
@@ -19,6 +17,7 @@
                                  SelectedValue="{Binding SelectedGameType}"
                                  HeightRequest="60"
                                  Margin="70,0" />
+
         <VerticalStackLayout IsVisible="{Binding IsX01Selected}"
                              Grid.Row="1">
 
@@ -49,18 +48,22 @@
               HorizontalOptions="Fill"
               Margin="20,10"
               Grid.Row="2">
+
             <controls:CaptionedSelector IsVisible="{Binding IsX01Selected}"
                                         Caption="{lang:Translation SelectGameView_Points}"
                                         Values="{Binding PointOptions}"
                                         SelectedValue="{Binding SelectedPoints}" />
+
             <controls:CaptionedSelector IsVisible="{Binding IsX01Selected, Converter={toolkit:InvertedBoolConverter}}"
                                         Caption="{lang:Translation SelectGameView_Points}"
                                         SelectedValue="{Binding SelectedCricketPointType}"
                                         Values="{Binding CricketPointTypes}" />
+
             <controls:CaptionedSelector Caption="{lang:Translation SelectGameView_Sets}"
                                         SelectedValue="{Binding SelectedSets}"
                                         Grid.Column="1"
                                         Values="{Binding SetCounts}" />
+
             <controls:CaptionedSelector Caption="{lang:Translation SelectGameView_Legs}"
                                         SelectedValue="{Binding SelectedLegs}"
                                         Grid.Column="2"
@@ -71,48 +74,60 @@
                CornerRadius="50"
                HorizontalOptions="Fill"
                Margin="25,0"
-               HeightRequest="280"
                Grid.Row="3">
+
             <Grid RowDefinitions="Auto,*">
                 <Grid HorizontalOptions="Fill"
                       ColumnDefinitions="*,*">
+
                     <Label Text="Players"
                            TextColor="{x:StaticResource Whiteish}"
                            FontSize="25"
                            FontFamily="OpenSans-Semibold"
                            Margin="0,5"
                            HorizontalOptions="Center" />
+
                     <HorizontalStackLayout Grid.Column="1"
                                            Spacing="5"
                                            Margin="5,0"
                                            VerticalOptions="Start"
                                            HorizontalOptions="End">
 
-                        <Frame WidthRequest="45"
+                        <Border WidthRequest="45"
                                HeightRequest="45"
                                Background="{x:StaticResource Gray500}"
-                               BorderColor="{x:StaticResource Whiteish}"
-                               CornerRadius="10">
-                            <Image Source="bot.svg"
-                                   WidthRequest="30"
-                                   HeightRequest="30" />
-                            <Frame.GestureRecognizers>
-                                <TapGestureRecognizer Command="{Binding AddBotCommand}" />
-                            </Frame.GestureRecognizers>
-                        </Frame>
+                               Stroke="{x:StaticResource Whiteish}">
 
-                        <Frame WidthRequest="45"
-                               HeightRequest="45"
-                               Background="{x:StaticResource Gray500}"
-                               BorderColor="{x:StaticResource Whiteish}"
-                               CornerRadius="10">
-                            <Image Source="player.svg"
+                            <Image Source="bot.png"
                                    WidthRequest="30"
                                    HeightRequest="30" />
-                            <Frame.GestureRecognizers>
+
+                            <Border.StrokeShape>
+                                <RoundRectangle CornerRadius="10" />
+                            </Border.StrokeShape>
+
+                            <Border.GestureRecognizers>
+                                <TapGestureRecognizer Command="{Binding AddBotCommand}" />
+                            </Border.GestureRecognizers>
+                        </Border>
+
+                        <Border WidthRequest="45"
+                               HeightRequest="45"
+                               Background="{x:StaticResource Gray500}"
+                               Stroke="{x:StaticResource Whiteish}">
+
+                            <Image Source="player.png"
+                                   WidthRequest="30"
+                                   HeightRequest="30" />
+
+                            <Border.StrokeShape>
+                                <RoundRectangle CornerRadius="10" />
+                            </Border.StrokeShape>
+
+                            <Border.GestureRecognizers>
                                 <TapGestureRecognizer Command="{Binding AddPlayerCommand}" />
-                            </Frame.GestureRecognizers>
-                        </Frame>
+                            </Border.GestureRecognizers>
+                        </Border>
 
                     </HorizontalStackLayout>
                 </Grid>
@@ -120,7 +135,8 @@
                       Margin="25,20">
                     
                     <ListView ItemsSource="{Binding PlayerList}"
-                              x:Name="PlayerListView">
+                              x:Name="PlayerListView"
+                              Background="Transparent">
                         
                         <ListView.ItemTemplate>
                             <DataTemplate>

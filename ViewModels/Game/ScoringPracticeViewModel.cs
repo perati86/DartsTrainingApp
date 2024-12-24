@@ -142,6 +142,9 @@ namespace DartsApp.ViewModels
         [RelayCommand]
         private async Task SubmitScore()
         {
+            if (CurrentRound > MaxRound)
+                return;
+
             CurrentRound++;
 
             TargetHits += CurrentScores[0];
@@ -239,7 +242,7 @@ namespace DartsApp.ViewModels
             }
             catch (Exception ex)
             {
-                await Application.Current.MainPage.DisplayAlert("Error", ex.Message + ex.StackTrace, "OK");
+                await Application.Current.MainPage.DisplayAlert(_translator.GetTranslation("Error_Title"), ex.Message + ex.StackTrace, "OK");
             }
         }
     }

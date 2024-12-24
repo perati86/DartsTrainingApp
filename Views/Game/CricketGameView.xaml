@@ -1,11 +1,12 @@
-<?xml version="1.0" encoding="utf-8" ?>
+﻿<?xml version="1.0" encoding="utf-8" ?>
 <mvvm:BaseView xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
                xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
                xmlns:toolkit="http://schemas.microsoft.com/dotnet/2022/maui/toolkit"
                xmlns:mvvm="clr-namespace:banditoth.MAUI.MVVM.Entities;assembly=banditoth.MAUI.MVVM"
                xmlns:controls="clr-namespace:DartsApp.Controls"
                x:Class="DartsApp.Views.CricketGameView"
-               Title="CricketGameView">
+               Title="Cricket"
+               NavigationPage.HasNavigationBar="{OnPlatform Android=false, Default=true}">
     
     <Grid RowDefinitions="Auto,*,Auto">
         
@@ -15,9 +16,10 @@
                                     VerticalOptions="Start" />
         
         <Label Text="{Binding CurrentPlayerName}"
+               Grid.Row="1"
                HorizontalOptions="Start"
                VerticalOptions="End"
-               Margin="20"
+               Margin="30"
                FontSize="20" />
 
         <controls:CricketKeyboard TypeScoreCommand="{Binding ScoreTypedCommand}"
