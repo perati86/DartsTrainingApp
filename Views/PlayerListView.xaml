@@ -25,28 +25,27 @@
         <Grid RowDefinitions="Auto,*,Auto">
 
             <Label Text="{lang:Translation PlayerListView_Title}"
-                   Style="{x:StaticResource WhiteSubTitleLabel}" 
-                   Margin="20"/>
-            
-            <ScrollView Grid.Row="1">
-                <ListView ItemsSource="{Binding Players}"
-                          SelectedItem="{Binding SelectedPlayer}"
-                          SelectionMode="Single">
+                   Style="{x:StaticResource WhiteSubTitleLabel}"
+                   Margin="20" />
 
-                    <ListView.ItemTemplate>
-                        <DataTemplate>
-                            <ViewCell>
-                                <Label Text="{Binding .}"
-                                       TextColor="White"
-                                       FontSize="16"
-                                       VerticalOptions="Center"
-                                       HorizontalOptions="Start"
-                                       Margin="40,0"/>
-                            </ViewCell>
-                        </DataTemplate>
-                    </ListView.ItemTemplate>
-                </ListView>
-            </ScrollView>
+            <ListView Grid.Row="1"
+                      ItemsSource="{Binding Players}"
+                      SelectedItem="{Binding SelectedPlayer, Mode=TwoWay}"
+                      SelectionMode="Single">
+
+                <ListView.ItemTemplate>
+                    <DataTemplate>
+                        <ViewCell>
+                            <Label Text="{Binding .}" 
+                                   TextColor="White"
+                                   FontSize="16"
+                                   VerticalOptions="Center"
+                                   HorizontalOptions="Start"
+                                   Margin="40,0" />
+                        </ViewCell>
+                    </DataTemplate>
+                </ListView.ItemTemplate>
+            </ListView>
 
             <Grid ColumnDefinitions="*,*"
                   Grid.Row="2">
@@ -54,14 +53,16 @@
                 <Button Text="{lang:Translation PlayerListView_Remove}"
                         Command="{Binding RemovePlayerCommand}"
                         Style="{x:StaticResource BasicButton}"
+                        LineBreakMode="TailTruncation"
                         Margin="0"
-                        FontSize="14" 
-                        CornerRadius="0"/>
+                        FontSize="14"
+                        CornerRadius="0" />
 
                 <Button Text="{lang:Translation PlayerListView_Add}"
                         Grid.Column="1"
                         Command="{Binding AddPlayerCommand}"
                         Style="{x:StaticResource BasicButton}"
+                        LineBreakMode="TailTruncation"
                         Margin="0"
                         FontSize="14"
                         CornerRadius="0" />

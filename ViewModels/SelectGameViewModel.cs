@@ -54,6 +54,9 @@ namespace DartsApp.ViewModels
         private ObservableCollection<DartsPlayer> _playerList = [];
 
         [ObservableProperty]
+        private List<string> botList;
+
+        [ObservableProperty]
         [NotifyPropertyChangedFor(nameof(IsX01Selected))]
         private int _selectedGameType;
 
@@ -94,6 +97,8 @@ namespace DartsApp.ViewModels
             CricketTypes = [_translator.GetTranslation("CricketType_Classic"), "Cut throat", _translator.GetTranslation("CricketType_RandomNumbers")];
             CricketPointTypes = [_translator.GetTranslation("On"), _translator.GetTranslation("Off")];
 
+            InitializeBotList();
+
             SelectedCricketPointType = CricketPointTypes[0];
             SelectedOutType = 1;
         }
@@ -118,25 +123,25 @@ namespace DartsApp.ViewModels
 
             PlayerList.Add(new DartsPlayer() { Name = playerName });
 
+            if (storedPlayerList.Contains(playerName) == false)
+                _persistentStorage.PlayerList = JsonSerializer.Serialize(storedPlayerList.Append(playerName));
+
             PlayerList = PlayerList;
         }
-
-        //TODO: Add BotList with names, add new Player to entity framework, delete player
 
         [RelayCommand]
         private async Task AddBot()
         {
-            var bot = new X01DartsBot() { Name = "Botond", Level = 10 };
+            var botName = await Application.Current.MainPage.DisplayActionSheet(_translator.GetTranslation("SelectGameViewModel_AddBot"), _translator.GetTranslation("Cancel"), null, BotList.ToArray());
 
-            var level = await Application.Current.MainPage.DisplayPromptAsync("New player", "Add new player", placeholder: "1-20", maxLength:2, keyboard: Keyboard.Numeric);
-
-            if (string.IsNullOrWhiteSpace(level))
+            if (string.IsNullOrWhiteSpace(botName) || botName == _translator.GetTranslation("Cancel"))
                 return;
 
-            bot.Level = int.Parse(level);
-            bot.Name = $"{bot.Name} (Level {level})";
-
-            PlayerList.Add(bot);
+            PlayerList.Add(new X01DartsBot()
+            {
+                Name = botName,
+                Level = BotList.IndexOf(botName) + 1
+            });
 
             PlayerList = PlayerList;
         }
@@ -242,6 +247,16 @@ namespace DartsApp.ViewModels
                 SetCount = SelectedSets,
                 HasPoints = SelectedCricketPointType == CricketPointTypes[0]
             };
+        }
+
+        private void InitializeBotList()
+        {
+            BotList = [];
+
+            for (int i = 1; i < 21; i++)
+            {
+                BotList.Add(_translator.GetTranslation($"DartsBot{i}") + $" ({i})");
+            }
         }
     }
 }

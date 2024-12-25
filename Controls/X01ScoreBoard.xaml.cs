@@ -46,10 +46,10 @@ public partial class X01ScoreBoard : ContentView
             scoreBoard.container.RowDefinitions.Add(new RowDefinition(40));
 
             scoreBoard.container.ColumnDefinitions = new ColumnDefinitionCollection(
+                new ColumnDefinition { Width = new GridLength(2.5, GridUnitType.Star) },
                 new ColumnDefinition(GridLength.Auto),
-                new ColumnDefinition(GridLength.Star),
-                new ColumnDefinition(GridLength.Star),
-                new ColumnDefinition(GridLength.Star));
+                new ColumnDefinition(GridLength.Auto),
+                new ColumnDefinition(GridLength.Auto));
 
             if (scoreBoard.IsDisplayingSets)
                 scoreBoard.container.ColumnDefinitions.Add(new ColumnDefinition(GridLength.Star));
@@ -64,7 +64,6 @@ public partial class X01ScoreBoard : ContentView
 
             playerLabel.HorizontalTextAlignment = TextAlignment.Start;
             playerLabel.HorizontalOptions = LayoutOptions.Start;
-            playerLabel.Padding = 5;
 
             AddViewToGrid(scoreBoard.container, playerLabel, 0, 0);
             AddViewToGrid(scoreBoard.container, setLabel, 0, 1);
@@ -108,6 +107,7 @@ public partial class X01ScoreBoard : ContentView
         {
             Text = text,
             FontSize = 14,
+            Padding = new Thickness(5, 0),
             TextColor = Colors.Black,
             FontFamily = "OpenSans-Semibold",
             HorizontalOptions = LayoutOptions.Center,

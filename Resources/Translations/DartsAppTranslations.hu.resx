@@ -117,225 +117,292 @@
   <resheader name="writer">
     <value>System.Resources.ResXResourceWriter, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
   </resheader>
-  <assembly alias="System.Windows.Forms" name="System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" />
-	<data name="Average" xml:space="preserve">
-  <value>Átlag</value>
-</data>
-	<data name="Cancel" xml:space="preserve">
-  <value>Mégsem</value>
-</data>
-	<data name="ChangeLanguage_Title" xml:space="preserve">
+  <data name="Average" xml:space="preserve">
+    <value>Átlag</value>
+  </data>
+  <data name="Cancel" xml:space="preserve">
+    <value>Mégsem</value>
+  </data>
+  <data name="ChangeLanguage_Title" xml:space="preserve">
     <value>Válassz nyelvet</value>
   </data>
-	<data name="CricketStatisticsViewModel_Average" xml:space="preserve">
-  <value>Átlagos</value>
-</data>
-	<data name="CricketStatisticsViewModel_Maximum" xml:space="preserve">
-  <value>Maximum</value>
-</data>
-	<data name="CricketStatisticsViewModel_Minimum" xml:space="preserve">
-  <value>Minimum</value>
-</data>
-	<data name="CricketStatisticsView_MarksPerRound" xml:space="preserve">
-  <value>Találatok egy körben</value>
-</data>
-	<data name="CricketStatisticsView_RoundsToWin" xml:space="preserve">
-  <value>Körök száma (győztes legekben)</value>
-</data>
-	<data name="CricketType_Classic" xml:space="preserve">
-  <value>Klasszikus</value>
-</data>
-	<data name="CricketType_RandomNumbers" xml:space="preserve">
-  <value>Véletlenszámok</value>
-</data>
-	<data name="Delete" xml:space="preserve">
-  <value>Törlés</value>
-</data>
-	<data name="DoubleIn" xml:space="preserve">
-  <value>Dupla beszálló</value>
-</data>
-	<data name="DoubleOut" xml:space="preserve">
-  <value>Dupla kiszálló</value>
-</data>
-	<data name="DoublesPracticeViewModel_0s" xml:space="preserve">
-  <value>0-ák</value>
-</data>
-<data name="Error_Title" xml:space="preserve">
+  <data name="CricketStatisticsViewModel_Average" xml:space="preserve">
+    <value>Átlagos</value>
+  </data>
+  <data name="CricketStatisticsViewModel_Maximum" xml:space="preserve">
+    <value>Maximum</value>
+  </data>
+  <data name="CricketStatisticsViewModel_Minimum" xml:space="preserve">
+    <value>Minimum</value>
+  </data>
+  <data name="CricketStatisticsView_MarksPerRound" xml:space="preserve">
+    <value>Találatok egy körben</value>
+  </data>
+  <data name="CricketStatisticsView_RoundsToWin" xml:space="preserve">
+    <value>Körök száma (győztes legekben)</value>
+  </data>
+  <data name="CricketType_Classic" xml:space="preserve">
+    <value>Klasszikus</value>
+  </data>
+  <data name="CricketType_RandomNumbers" xml:space="preserve">
+    <value>Véletlenszámok</value>
+  </data>
+  <data name="Delete" xml:space="preserve">
+    <value>Törlés</value>
+  </data>
+  <data name="DoubleIn" xml:space="preserve">
+    <value>Dupla beszálló</value>
+  </data>
+  <data name="DoubleOut" xml:space="preserve">
+    <value>Dupla kiszálló</value>
+  </data>
+  <data name="DoublesPracticeViewModel_0s" xml:space="preserve">
+    <value>0-ák</value>
+  </data>
+  <data name="Error_Title" xml:space="preserve">
     <value>Hiba</value>
   </data>
-	<data name="Error_SelectGameViewModel_AddMorePlayers" xml:space="preserve">
-  <value>Adj hozzá legalább egy játékost</value>
+  <data name="Error_SelectGameViewModel_AddMorePlayers" xml:space="preserve">
+    <value>Adj hozzá legalább egy játékost</value>
+  </data>
+  <data name="MainPage_HeaderText" xml:space="preserve">
+    <value>Mit szeretnél ma játszani?</value>
+  </data>
+  <data name="MainPage_NewGame" xml:space="preserve">
+    <value>Új játék</value>
+  </data>
+  <data name="MainPage_Statistics" xml:space="preserve">
+    <value>Statisztikák</value>
+  </data>
+  <data name="MainPage_Training" xml:space="preserve">
+    <value>Edzés</value>
+  </data>
+  <data name="MainViewModel_SelectPlayer" xml:space="preserve">
+    <value>Játékos kiválasztása</value>
+  </data>
+  <data name="MasterIn" xml:space="preserve">
+    <value>Mester beszálló</value>
+  </data>
+  <data name="MasterOut" xml:space="preserve">
+    <value>Mester kiszálló</value>
+  </data>
+  <data name="Off" xml:space="preserve">
+    <value>Ki</value>
+  </data>
+  <data name="On" xml:space="preserve">
+    <value>Be</value>
+  </data>
+  <data name="Player" xml:space="preserve">
+    <value>Játékos</value>
+  </data>
+  <data name="PlayerListViewModel_NewPlayer_PlaceHolder" xml:space="preserve">
+    <value>Józsi</value>
+  </data>
+  <data name="PlayerListViewModel_NewPlayer_Text" xml:space="preserve">
+    <value>Új játékos hozzáadása</value>
+  </data>
+  <data name="PlayerListViewModel_NewPlayer_Title" xml:space="preserve">
+    <value>Új játékos</value>
+  </data>
+  <data name="PlayerListViewModel_WrongName_Text" xml:space="preserve">
+    <value>Ez a név már foglalt</value>
+  </data>
+  <data name="PlayerListViewModel_WrongName_Title" xml:space="preserve">
+    <value>Hibás név</value>
+  </data>
+  <data name="PlayerListView_Add" xml:space="preserve">
+    <value>Új játékos hozzáadása</value>
+  </data>
+  <data name="PlayerListView_Remove" xml:space="preserve">
+    <value>Játékos eltávolítása</value>
+  </data>
+  <data name="PlayerListView_Title" xml:space="preserve">
+    <value>Játékosok</value>
+  </data>
+  <data name="Practice121View_Checkout" xml:space="preserve">
+    <value>Kiszálló</value>
+  </data>
+  <data name="Practice121View_Checkpoint" xml:space="preserve">
+    <value>Checkpoint</value>
+  </data>
+  <data name="Practice121View_Round" xml:space="preserve">
+    <value>Kör</value>
+  </data>
+  <data name="Practice121View_Score" xml:space="preserve">
+    <value>Pontszám</value>
+  </data>
+  <data name="ScoringPracticeViewModel_Congratulations" xml:space="preserve">
+    <value>Gratulálunk</value>
+  </data>
+  <data name="ScoringPracticeViewModel_Double" xml:space="preserve">
+    <value>Dupla</value>
+  </data>
+  <data name="ScoringPracticeViewModel_FinishedTraining" xml:space="preserve">
+    <value>Befejezted az edzést!</value>
+  </data>
+  <data name="ScoringPracticeViewModel_Sector" xml:space="preserve">
+    <value>Szektor</value>
+  </data>
+  <data name="ScoringPracticeViewModel_Single" xml:space="preserve">
+    <value>Szimpla</value>
+  </data>
+  <data name="ScoringPracticeViewModel_Triple" xml:space="preserve">
+    <value>Triplák: </value>
+  </data>
+  <data name="ScoringPracticeView_Doubles" xml:space="preserve">
+    <value>Duplák: </value>
+  </data>
+  <data name="ScoringPracticeView_Misses" xml:space="preserve">
+    <value>Mellé: </value>
+  </data>
+  <data name="ScoringPracticeView_Sectors" xml:space="preserve">
+    <value>Szektorok: </value>
+  </data>
+  <data name="ScoringPracticeView_Trebles" xml:space="preserve">
+    <value>Triplák: </value>
+  </data>
+  <data name="SelectGameViewModel_AddPlayer" xml:space="preserve">
+    <value>Játékos hozzáadása</value>
+  </data>
+  <data name="SelectGameView_Legs" xml:space="preserve">
+    <value>Legek</value>
+  </data>
+  <data name="SelectGameView_Points" xml:space="preserve">
+    <value>Pontok</value>
+  </data>
+  <data name="SelectGameView_Sets" xml:space="preserve">
+    <value>Szettek</value>
+  </data>
+  <data name="SelectGameView_Start" xml:space="preserve">
+    <value>Kezdés</value>
+  </data>
+  <data name="SelectTrainingView_Doubles" xml:space="preserve">
+    <value>Duplák</value>
+  </data>
+  <data name="SelectTrainingView_HeaderText" xml:space="preserve">
+    <value>Mit szeretnél gyakorolni?</value>
+  </data>
+  <data name="SelectTrainingView_Scoring" xml:space="preserve">
+    <value>Tömeg</value>
+  </data>
+  <data name="StraightIn" xml:space="preserve">
+    <value>Szimpla beszálló</value>
+  </data>
+  <data name="StraightOut" xml:space="preserve">
+    <value>Szimpla kiszálló</value>
+  </data>
+  <data name="X01GameViewModel_CheckoutDartsUsed" xml:space="preserve">
+    <value>Kiszállóra eldobott nyilak</value>
+  </data>
+  <data name="X01GameViewModel_DartsUsed" xml:space="preserve">
+    <value>Nyilak</value>
+  </data>
+  <data name="X01GameViewModel_WrongScorePopup_Text" xml:space="preserve">
+    <value>Ez a pontszám érvénytelen</value>
+  </data>
+  <data name="X01GameViewModel_WrongScorePopup_Title" xml:space="preserve">
+    <value>Hibás pontszám</value>
+  </data>
+  <data name="X01StatisticsViewModel_3DartAverage" xml:space="preserve">
+    <value>3 nyilas átlag</value>
+  </data>
+  <data name="X01StatisticsViewModel_9DartAverage" xml:space="preserve">
+    <value>Első 9 nyilas átlag</value>
+  </data>
+  <data name="X01StatisticsViewModel_BestLeg" xml:space="preserve">
+    <value>Legkevesebb nyíl</value>
+  </data>
+  <data name="X01StatisticsViewModel_HighestCheckout" xml:space="preserve">
+    <value>Legmagasabb kiszálló</value>
+  </data>
+  <data name="X01StatisticsViewModel_HighestScore" xml:space="preserve">
+    <value>Legjobb kör</value>
+  </data>
+  <data name="X01StatisticsViewModel_LegsWon" xml:space="preserve">
+    <value>Megnyert legek</value>
+  </data>
+  <data name="X01StatisticsViewModel_Monthly" xml:space="preserve">
+    <value>Havi</value>
+  </data>
+  <data name="X01StatisticsViewModel_Total" xml:space="preserve">
+    <value>Összesen</value>
+  </data>
+  <data name="X01StatisticsViewModel_Weekly" xml:space="preserve">
+    <value>Heti</value>
+  </data>
+  <data name="X01StatisticsView_BigThrows" xml:space="preserve">
+    <value>Nagy dobások</value>
+  </data>
+  <data name="X01StatisticsView_Checkout" xml:space="preserve">
+    <value>Kiszálló</value>
+  </data>
+  <data name="DartsBot1" xml:space="preserve">
+    <value>Hisztis kisgyerek</value>
+  </data>
+  <data name="DartsBot2" xml:space="preserve">
+    <value>Reumás nagymama</value>
+  </data>
+  <data name="DartsBot3" xml:space="preserve">
+    <value>Részeg hajléktalan</value>
+  </data>
+  <data name="DartsBot4" xml:space="preserve">
+    <value>Dupla-Nulla Dániel</value>
+  </data>
+  <data name="DartsBot5" xml:space="preserve">
+    <value>Táblatörő Tihamér</value>
+  </data>
+  <data name="DartsBot6" xml:space="preserve">
+    <value>Dobálós Dezső</value>
+  </data>
+  <data name="DartsBot7" xml:space="preserve">
+    <value>Dartsterem takarítónője</value>
+  </data>
+  <data name="DartsBot8" xml:space="preserve">
+    <value>Dartsbolt tulajdonosa</value>
+  </data>
+  <data name="DartsBot9" xml:space="preserve">
+    <value>Helyi kocsma hőse</value>
+  </data>
+  <data name="DartsBot10" xml:space="preserve">
+    <value>Botond</value>
+  </data>
+  <data name="DartsBot11" xml:space="preserve">
+    <value>Dartsklub bajnoka</value>
+  </data>
+  <data name="DartsBot12" xml:space="preserve">
+    <value>Sólyomszem</value>
+  </data>
+  <data name="DartsBot13" xml:space="preserve">
+    <value>Robin Hood</value>
+  </data>
+  <data name="DartsBot14" xml:space="preserve">
+    <value>Zöld Íjász</value>
+  </data>
+  <data name="DartsBot15" xml:space="preserve">
+    <value>Városi bajnok</value>
+  </data>
+  <data name="DartsBot16" xml:space="preserve">
+    <value>Területi bajnok</value>
+  </data>
+  <data name="DartsBot17" xml:space="preserve">
+    <value>Országos bajnok</value>
+  </data>
+  <data name="DartsBot18" xml:space="preserve">
+    <value>Fallon Sherrock</value>
+  </data>
+  <data name="DartsBot19" xml:space="preserve">
+    <value>Dimitri van den Bergh</value>
+  </data>
+  <data name="DartsBot20" xml:space="preserve">
+    <value>Luke Littler</value>
+  </data>
+  <data name="SelectGameViewModel_AddBot" xml:space="preserve">
+    <value>Bot hozzáadása</value>
+  </data>
+	<data name="PlayerListViewModel_RemoveConfirmation_Title" xml:space="preserve">
+  <value>Biztosan törlöd a játékost?</value>
 </data>
-	<data name="MainPage_HeaderText" xml:space="preserve">
-  <value>Mit szeretnél ma játszani?</value>
+	<data name="PlayerListViewModel_RemoveConfirmation_Text" xml:space="preserve">
+  <value>A játékos eltávolítása törli az összes lejátszott mérkőzését is.</value>
 </data>
-	<data name="MainPage_NewGame" xml:space="preserve">
-  <value>Új játék</value>
-</data>
-	<data name="MainPage_Statistics" xml:space="preserve">
-  <value>Statisztikák</value>
-</data>
-	<data name="MainPage_Training" xml:space="preserve">
-  <value>Edzés</value>
-</data>
-	<data name="MainViewModel_SelectPlayer" xml:space="preserve">
-  <value>Játékos kiválasztása</value>
-</data>
-	<data name="MasterIn" xml:space="preserve">
-  <value>Mester beszálló</value>
-</data>
-	<data name="MasterOut" xml:space="preserve">
-  <value>Mester kiszálló</value>
-</data>
-	<data name="Off" xml:space="preserve">
-  <value>Ki</value>
-</data>
-	<data name="On" xml:space="preserve">
-  <value>Be</value>
-</data>
-	<data name="Player" xml:space="preserve">
-  <value>Játékos</value>
-</data>
-	<data name="PlayerListViewModel_NewPlayer_PlaceHolder" xml:space="preserve">
-  <value>Józsi</value>
-</data>
-	<data name="PlayerListViewModel_NewPlayer_Text" xml:space="preserve">
-  <value>Új játékos hozzáadása</value>
-</data>
-	<data name="PlayerListViewModel_NewPlayer_Title" xml:space="preserve">
-  <value>Új játékos</value>
-</data>
-	<data name="PlayerListViewModel_WrongName_Text" xml:space="preserve">
-  <value>Ez a név már foglalt</value>
-</data>
-	<data name="PlayerListViewModel_WrongName_Title" xml:space="preserve">
-  <value>Hibás név</value>
-</data>
-	<data name="PlayerListView_Add" xml:space="preserve">
-  <value>Új játékos hozzáadása</value>
-</data>
-	<data name="PlayerListView_Remove" xml:space="preserve">
-  <value>Játékos eltávolítása</value>
-</data>
-	<data name="PlayerListView_Title" xml:space="preserve">
-  <value>Játékosok</value>
-</data>
-	<data name="Practice121View_Checkout" xml:space="preserve">
-  <value>Kiszálló</value>
-</data>
-	<data name="Practice121View_Checkpoint" xml:space="preserve">
-  <value>Checkpoint</value>
-</data>
-	<data name="Practice121View_Round" xml:space="preserve">
-  <value>Kör</value>
-</data>
-	<data name="Practice121View_Score" xml:space="preserve">
-  <value>Pontszám</value>
-</data>
-	<data name="ScoringPracticeViewModel_Congratulations" xml:space="preserve">
-  <value>Gratulálunk</value>
-</data>
-	<data name="ScoringPracticeViewModel_Double" xml:space="preserve">
-  <value>Dupla</value>
-</data>
-	<data name="ScoringPracticeViewModel_FinishedTraining" xml:space="preserve">
-  <value>Befejezted az edzést!</value>
-</data>
-	<data name="ScoringPracticeViewModel_Sector" xml:space="preserve">
-  <value>Szektor</value>
-</data>
-	<data name="ScoringPracticeViewModel_Single" xml:space="preserve">
-  <value>Szimpla</value>
-</data>
-	<data name="ScoringPracticeViewModel_Triple" xml:space="preserve">
-  <value>Triplák: </value>
-</data>
-	<data name="ScoringPracticeView_Doubles" xml:space="preserve">
-  <value>Duplák: </value>
-</data>
-	<data name="ScoringPracticeView_Misses" xml:space="preserve">
-  <value>Mellé: </value>
-</data>
-	<data name="ScoringPracticeView_Sectors" xml:space="preserve">
-  <value>Szektorok: </value>
-</data>
-	<data name="ScoringPracticeView_Trebles" xml:space="preserve">
-  <value>Triplák: </value>
-</data>
-	<data name="SelectGameViewModel_AddPlayer" xml:space="preserve">
-  <value>Játékos hozzáadása</value>
-</data>
-	<data name="SelectGameView_Legs" xml:space="preserve">
-  <value>Legek</value>
-</data>
-	<data name="SelectGameView_Points" xml:space="preserve">
-  <value>Pontok</value>
-</data>
-	<data name="SelectGameView_Sets" xml:space="preserve">
-  <value>Szettek</value>
-</data>
-	<data name="SelectGameView_Start" xml:space="preserve">
-  <value>Kezdés</value>
-</data>
-	<data name="SelectTrainingView_Doubles" xml:space="preserve">
-  <value>Duplák</value>
-</data>
-	<data name="SelectTrainingView_HeaderText" xml:space="preserve">
-  <value>Mit szeretnél gyakorolni?</value>
-</data>
-	<data name="SelectTrainingView_Scoring" xml:space="preserve">
-  <value>Tömeg</value>
-</data>
-	<data name="StraightIn" xml:space="preserve">
-  <value>Szimpla beszálló</value>
-</data>
-	<data name="StraightOut" xml:space="preserve">
-  <value>Szimpla kiszálló</value>
-</data>
-	<data name="X01GameViewModel_CheckoutDartsUsed" xml:space="preserve">
-  <value>Kiszállóra eldobott nyilak</value>
-</data>
-	<data name="X01GameViewModel_DartsUsed" xml:space="preserve">
-  <value>Nyilak</value>
-</data>
-	<data name="X01GameViewModel_WrongScorePopup_Text" xml:space="preserve">
-  <value>Ez a pontszám érvénytelen</value>
-</data>
-	<data name="X01GameViewModel_WrongScorePopup_Title" xml:space="preserve">
-  <value>Hibás pontszám</value>
-</data>
-	<data name="X01StatisticsViewModel_3DartAverage" xml:space="preserve">
-  <value>3 nyilas átlag</value>
-</data>
-	<data name="X01StatisticsViewModel_9DartAverage" xml:space="preserve">
-  <value>Első 9 nyilas átlag</value>
-</data>
-	<data name="X01StatisticsViewModel_BestLeg" xml:space="preserve">
-  <value>Legkevesebb nyíl</value>
-</data>
-	<data name="X01StatisticsViewModel_HighestCheckout" xml:space="preserve">
-  <value>Legmagasabb kiszálló</value>
-</data>
-	<data name="X01StatisticsViewModel_HighestScore" xml:space="preserve">
-  <value>Legjobb kör</value>
-</data>
-	<data name="X01StatisticsViewModel_LegsWon" xml:space="preserve">
-  <value>Megnyert legek</value>
-</data>
-	<data name="X01StatisticsViewModel_Monthly" xml:space="preserve">
-  <value>Havi</value>
-</data>
-	<data name="X01StatisticsViewModel_Total" xml:space="preserve">
-  <value>Összesen</value>
-</data>
-	<data name="X01StatisticsViewModel_Weekly" xml:space="preserve">
-  <value>Heti</value>
-</data>
-	<data name="X01StatisticsView_BigThrows" xml:space="preserve">
-  <value>Nagy dobások</value>
-</data>
-	<data name="X01StatisticsView_Checkout" xml:space="preserve">
-  <value>Kiszálló</value>
-</data>
-
 </root>

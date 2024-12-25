@@ -46,6 +46,8 @@ namespace DartsApp.Entities
 
         public double ExpectedMarksPerThrow => MasterHitChance * 3 + SectorHitChance - MasterHitChance;
 
+
+        //TODO:Make bot wanting score points less, when he is ahead
         public (int sector, ScoreType scoreType) NextTarget(Dictionary<int, int> needsToClose, Dictionary<int,int> canClose, List<int> canScore, int pointdifference, int dartsLeft)
         {
             if (needsToClose.Count + canClose.Count == 0)
@@ -65,7 +67,7 @@ namespace DartsApp.Entities
                 : needsToCloseInfo.difference > canCloseInfo.difference ? canCloseInfo
                 : canCloseInfo.sector > needsToCloseInfo.sector ? canCloseInfo : needsToCloseInfo;
 
-            if (bestSectorToClose.difference == double.MaxValue && canScore.Any())
+            if (bestSectorToClose.difference == double.MaxValue && canScore.Any() && pointdifference < 50)
                 return (canScore.OrderDescending().First(), ScoreType.Triple);
             else
                 return (bestSectorToClose.sector, ScoreType.Triple);

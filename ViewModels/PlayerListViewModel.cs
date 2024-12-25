@@ -48,13 +48,24 @@ namespace DartsApp.ViewModels
         [RelayCommand]
         private async Task RemovePlayer()
         {
-            if (string.IsNullOrEmpty(SelectedPlayer))
+            if (string.IsNullOrEmpty(SelectedPlayer) || Players.Contains(SelectedPlayer) == false)
+                return;
+
+            var isDeletionConfirmed = await MopupService.Instance.PopupStack[MopupService.Instance.PopupStack.Count - 1]
+                    .DisplayAlert(_translator.GetTranslation("PlayerListViewModel_RemoveConfirmation_Title"),
+                    _translator.GetTranslation("PlayerListViewModel_RemoveConfirmation_Text"), _translator.GetTranslation("Delete"), _translator.GetTranslation("Cancel"));
+
+            if (isDeletionConfirmed == false)
                 return;
 
             Players.Remove(SelectedPlayer);
-            SelectedPlayer = null;
+            SelectedPlayer = Players.Count > 0 ? Players[0] : null;
 
             _dbDataContext.RemoveRange(_dbDataContext.X01Legs.Where(x => x.Name == SelectedPlayer));
+            _dbDataContext.RemoveRange(_dbDataContext.CricketLegs.Where(x => x.Name == SelectedPlayer));
+            _dbDataContext.RemoveRange(_dbDataContext.ScoringPracticeLegs.Where(x => x.Name == SelectedPlayer));
+            _dbDataContext.RemoveRange(_dbDataContext.DoublesPracticeLegs.Where(x => x.Name == SelectedPlayer));
+
             await _dbDataContext.SaveChangesAsync();
 
             UpdateStorage();
@@ -83,6 +94,7 @@ namespace DartsApp.ViewModels
                 }
 
                 Players.Add(playerName);
+                SelectedPlayer = playerName;
 
                 UpdateStorage();
             }

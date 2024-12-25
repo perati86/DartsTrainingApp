@@ -80,7 +80,7 @@
                 <Grid HorizontalOptions="Fill"
                       ColumnDefinitions="*,*">
 
-                    <Label Text="Players"
+                    <Label Text="{lang:Translation PlayerListView_Title}"
                            TextColor="{x:StaticResource Whiteish}"
                            FontSize="25"
                            FontFamily="OpenSans-Semibold"
@@ -94,9 +94,9 @@
                                            HorizontalOptions="End">
 
                         <Border WidthRequest="45"
-                               HeightRequest="45"
-                               Background="{x:StaticResource Gray500}"
-                               Stroke="{x:StaticResource Whiteish}">
+                                HeightRequest="45"
+                                Background="{x:StaticResource Gray500}"
+                                Stroke="{x:StaticResource Whiteish}">
 
                             <Image Source="bot.png"
                                    WidthRequest="30"
@@ -112,9 +112,9 @@
                         </Border>
 
                         <Border WidthRequest="45"
-                               HeightRequest="45"
-                               Background="{x:StaticResource Gray500}"
-                               Stroke="{x:StaticResource Whiteish}">
+                                HeightRequest="45"
+                                Background="{x:StaticResource Gray500}"
+                                Stroke="{x:StaticResource Whiteish}">
 
                             <Image Source="player.png"
                                    WidthRequest="30"
@@ -133,25 +133,29 @@
                 </Grid>
                 <Grid Grid.Row="1"
                       Margin="25,20">
-                    
+
                     <ListView ItemsSource="{Binding PlayerList}"
-                              x:Name="PlayerListView"
                               Background="Transparent">
-                        
+
                         <ListView.ItemTemplate>
                             <DataTemplate>
                                 <ViewCell>
-                                    
+
                                     <Label Text="{Binding Name}"
                                            TextColor="{x:StaticResource Whiteish}"
                                            FontFamily="OpenSans-Semibold">
-                                        
+
                                         <Label.GestureRecognizers>
                                             <SwipeGestureRecognizer Command="{Binding BindingContext.RemovePlayerCommand, Source={x:Reference this}}"
                                                                     CommandParameter="{Binding .}"
                                                                     Direction="Left,Right"
-                                                                    Threshold="100" />
+                                                                    Threshold="50" />
+
+                                            <TapGestureRecognizer Command="{Binding BindingContext.RemovePlayerCommand, Source={x:Reference this}}"
+                                                                  CommandParameter="{Binding .}"
+                                                                  NumberOfTapsRequired="2" />
                                         </Label.GestureRecognizers>
+
                                     </Label>
                                 </ViewCell>
                             </DataTemplate>

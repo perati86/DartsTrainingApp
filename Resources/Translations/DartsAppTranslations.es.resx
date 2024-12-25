@@ -117,224 +117,293 @@
   <resheader name="writer">
     <value>System.Resources.ResXResourceWriter, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
   </resheader>
-  <assembly alias="System.Windows.Forms" name="System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" />
-	<data name="Average" xml:space="preserve">
-  <value>Promedio</value>
-</data>
-	<data name="Cancel" xml:space="preserve">
-  <value>Cancelar</value>
-</data>
-	<data name="ChangeLanguage_Title" xml:space="preserve">
-  <value>Elige el idioma</value>
-</data>
-	<data name="CricketStatisticsViewModel_Average" xml:space="preserve">
-  <value>Promedio</value>
-</data>
-	<data name="CricketStatisticsViewModel_Maximum" xml:space="preserve">
-  <value>Máximo</value>
-</data>
-	<data name="CricketStatisticsViewModel_Minimum" xml:space="preserve">
-  <value>Mínimo</value>
-</data>
-	<data name="CricketStatisticsView_MarksPerRound" xml:space="preserve">
-  <value>Puntajes por ronda</value>
-</data>
-	<data name="CricketStatisticsView_RoundsToWin" xml:space="preserve">
-  <value>Rondas para ganar</value>
-</data>
-	<data name="CricketType_Classic" xml:space="preserve">
-  <value>Clásico</value>
-</data>
-	<data name="CricketType_RandomNumbers" xml:space="preserve">
-  <value>Números aleatorios</value>
-</data>
-	<data name="Delete" xml:space="preserve">
-  <value>Eliminar</value>
-</data>
-	<data name="DoubleIn" xml:space="preserve">
-  <value>Doble entrada</value>
-</data>
-	<data name="DoubleOut" xml:space="preserve">
-  <value>Doble salida</value>
-</data>
-	<data name="DoublesPracticeViewModel_0s" xml:space="preserve">
-  <value>0's</value>
-</data>
-<data name="Error_Title" xml:space="preserve">
+  <data name="Average" xml:space="preserve">
+    <value>Promedio</value>
+  </data>
+  <data name="Cancel" xml:space="preserve">
+    <value>Cancelar</value>
+  </data>
+  <data name="ChangeLanguage_Title" xml:space="preserve">
+    <value>Elige el idioma</value>
+  </data>
+  <data name="CricketStatisticsViewModel_Average" xml:space="preserve">
+    <value>Promedio</value>
+  </data>
+  <data name="CricketStatisticsViewModel_Maximum" xml:space="preserve">
+    <value>Máximo</value>
+  </data>
+  <data name="CricketStatisticsViewModel_Minimum" xml:space="preserve">
+    <value>Mínimo</value>
+  </data>
+  <data name="CricketStatisticsView_MarksPerRound" xml:space="preserve">
+    <value>Puntajes por ronda</value>
+  </data>
+  <data name="CricketStatisticsView_RoundsToWin" xml:space="preserve">
+    <value>Rondas para ganar</value>
+  </data>
+  <data name="CricketType_Classic" xml:space="preserve">
+    <value>Clásico</value>
+  </data>
+  <data name="CricketType_RandomNumbers" xml:space="preserve">
+    <value>Números aleatorios</value>
+  </data>
+  <data name="Delete" xml:space="preserve">
+    <value>Eliminar</value>
+  </data>
+  <data name="DoubleIn" xml:space="preserve">
+    <value>Doble entrada</value>
+  </data>
+  <data name="DoubleOut" xml:space="preserve">
+    <value>Doble salida</value>
+  </data>
+  <data name="DoublesPracticeViewModel_0s" xml:space="preserve">
+    <value>0's</value>
+  </data>
+  <data name="Error_Title" xml:space="preserve">
     <value>Error</value>
   </data>
-	<data name="Error_SelectGameViewModel_AddMorePlayers" xml:space="preserve">
-  <value>Agrega al menos un jugador</value>
+  <data name="Error_SelectGameViewModel_AddMorePlayers" xml:space="preserve">
+    <value>Agrega al menos un jugador</value>
+  </data>
+  <data name="MainPage_HeaderText" xml:space="preserve">
+    <value>¿Qué te gustaría hacer?</value>
+  </data>
+  <data name="MainPage_NewGame" xml:space="preserve">
+    <value>Nuevo juego</value>
+  </data>
+  <data name="MainPage_Statistics" xml:space="preserve">
+    <value>Estadísticas</value>
+  </data>
+  <data name="MainPage_Training" xml:space="preserve">
+    <value>Entrenamiento</value>
+  </data>
+  <data name="MainViewModel_SelectPlayer" xml:space="preserve">
+    <value>Seleccionar jugador</value>
+  </data>
+  <data name="MasterIn" xml:space="preserve">
+    <value>Maestro entrada</value>
+  </data>
+  <data name="MasterOut" xml:space="preserve">
+    <value>Maestro salida</value>
+  </data>
+  <data name="Off" xml:space="preserve">
+    <value>Apagar</value>
+  </data>
+  <data name="On" xml:space="preserve">
+    <value>Encender</value>
+  </data>
+  <data name="Player" xml:space="preserve">
+    <value>Jugador</value>
+  </data>
+  <data name="PlayerListViewModel_NewPlayer_PlaceHolder" xml:space="preserve">
+    <value>Carlos</value>
+  </data>
+  <data name="PlayerListViewModel_NewPlayer_Text" xml:space="preserve">
+    <value>Agregar nuevo jugador</value>
+  </data>
+  <data name="PlayerListViewModel_NewPlayer_Title" xml:space="preserve">
+    <value>Nuevo jugador</value>
+  </data>
+  <data name="PlayerListViewModel_WrongName_Text" xml:space="preserve">
+    <value>Ya existe un jugador con este nombre</value>
+  </data>
+  <data name="PlayerListViewModel_WrongName_Title" xml:space="preserve">
+    <value>Nombre incorrecto</value>
+  </data>
+  <data name="PlayerListView_Add" xml:space="preserve">
+    <value>Agregar nuevo jugador</value>
+  </data>
+  <data name="PlayerListView_Remove" xml:space="preserve">
+    <value>Eliminar jugador</value>
+  </data>
+  <data name="PlayerListView_Title" xml:space="preserve">
+    <value>Jugadores</value>
+  </data>
+  <data name="Practice121View_Checkout" xml:space="preserve">
+    <value>Checkout</value>
+  </data>
+  <data name="Practice121View_Checkpoint" xml:space="preserve">
+    <value>Punto de control</value>
+  </data>
+  <data name="Practice121View_Round" xml:space="preserve">
+    <value>Ronda</value>
+  </data>
+  <data name="Practice121View_Score" xml:space="preserve">
+    <value>Puntuación</value>
+  </data>
+  <data name="ScoringPracticeViewModel_Congratulations" xml:space="preserve">
+    <value>¡Felicidades!</value>
+  </data>
+  <data name="ScoringPracticeViewModel_Double" xml:space="preserve">
+    <value>Doble</value>
+  </data>
+  <data name="ScoringPracticeViewModel_FinishedTraining" xml:space="preserve">
+    <value>¡Has terminado el entrenamiento!</value>
+  </data>
+  <data name="ScoringPracticeViewModel_Sector" xml:space="preserve">
+    <value>Sector</value>
+  </data>
+  <data name="ScoringPracticeViewModel_Single" xml:space="preserve">
+    <value>Sencillo</value>
+  </data>
+  <data name="ScoringPracticeViewModel_Triple" xml:space="preserve">
+    <value>Tríplice</value>
+  </data>
+  <data name="ScoringPracticeView_Doubles" xml:space="preserve">
+    <value>Dobles: </value>
+  </data>
+  <data name="ScoringPracticeView_Misses" xml:space="preserve">
+    <value>Errores: </value>
+  </data>
+  <data name="ScoringPracticeView_Sectors" xml:space="preserve">
+    <value>Sectores: </value>
+  </data>
+  <data name="ScoringPracticeView_Trebles" xml:space="preserve">
+    <value>Triples: </value>
+  </data>
+  <data name="SelectGameViewModel_AddPlayer" xml:space="preserve">
+    <value>Agregar jugador</value>
+  </data>
+  <data name="SelectGameView_Legs" xml:space="preserve">
+    <value>Legs</value>
+  </data>
+  <data name="SelectGameView_Points" xml:space="preserve">
+    <value>Puntos</value>
+  </data>
+  <data name="SelectGameView_Sets" xml:space="preserve">
+    <value>Sets</value>
+  </data>
+  <data name="SelectGameView_Start" xml:space="preserve">
+    <value>Iniciar</value>
+  </data>
+  <data name="SelectTrainingView_Doubles" xml:space="preserve">
+    <value>Dobles</value>
+  </data>
+  <data name="SelectTrainingView_HeaderText" xml:space="preserve">
+    <value>¿Qué te gustaría practicar?</value>
+  </data>
+  <data name="SelectTrainingView_Scoring" xml:space="preserve">
+    <value>Puntuación</value>
+  </data>
+  <data name="StraightIn" xml:space="preserve">
+    <value>Entrada directa</value>
+  </data>
+  <data name="StraightOut" xml:space="preserve">
+    <value>Salida directa</value>
+  </data>
+  <data name="X01GameViewModel_CheckoutDartsUsed" xml:space="preserve">
+    <value>Checkout darts usados</value>
+  </data>
+  <data name="X01GameViewModel_DartsUsed" xml:space="preserve">
+    <value>Dados usados</value>
+  </data>
+  <data name="X01GameViewModel_WrongScorePopup_Text" xml:space="preserve">
+    <value>Esta puntuación no es válida</value>
+  </data>
+  <data name="X01GameViewModel_WrongScorePopup_Title" xml:space="preserve">
+    <value>Puntuación incorrecta</value>
+  </data>
+  <data name="X01StatisticsViewModel_3DartAverage" xml:space="preserve">
+    <value>Promedio de 3 dardos</value>
+  </data>
+  <data name="X01StatisticsViewModel_9DartAverage" xml:space="preserve">
+    <value>Promedio de los primeros 9 dardos</value>
+  </data>
+  <data name="X01StatisticsViewModel_BestLeg" xml:space="preserve">
+    <value>Mejor pierna</value>
+  </data>
+  <data name="X01StatisticsViewModel_HighestCheckout" xml:space="preserve">
+    <value>Mayor checkout</value>
+  </data>
+  <data name="X01StatisticsViewModel_HighestScore" xml:space="preserve">
+    <value>Puntuación más alta</value>
+  </data>
+  <data name="X01StatisticsViewModel_LegsWon" xml:space="preserve">
+    <value>Legs ganadas</value>
+  </data>
+  <data name="X01StatisticsViewModel_Monthly" xml:space="preserve">
+    <value>Mensual</value>
+  </data>
+  <data name="X01StatisticsViewModel_Total" xml:space="preserve">
+    <value>Total</value>
+  </data>
+  <data name="X01StatisticsViewModel_Weekly" xml:space="preserve">
+    <value>Semanal</value>
+  </data>
+  <data name="X01StatisticsView_BigThrows" xml:space="preserve">
+    <value>Grandes lanzamientos</value>
+  </data>
+  <data name="X01StatisticsView_Checkout" xml:space="preserve">
+    <value>Checkout</value>
+  </data>
+  <data name="DartsBot1" xml:space="preserve">
+    <value>Niño Quejica</value>
+  </data>
+  <data name="DartsBot2" xml:space="preserve">
+    <value>Abuela Artrítica</value>
+  </data>
+  <data name="DartsBot3" xml:space="preserve">
+    <value>Vagabundo Borracho</value>
+  </data>
+  <data name="DartsBot4" xml:space="preserve">
+    <value>Doble-Cero Diego</value>
+  </data>
+  <data name="DartsBot5" xml:space="preserve">
+    <value>Thiago Rompe-Tableros</value>
+  </data>
+  <data name="DartsBot6" xml:space="preserve">
+    <value>Tirador Ted</value>
+  </data>
+  <data name="DartsBot7" xml:space="preserve">
+    <value>Limpiador de la Sala de Dardos</value>
+  </data>
+  <data name="DartsBot8" xml:space="preserve">
+    <value>Dueño de la Tienda de Dardos</value>
+  </data>
+  <data name="DartsBot9" xml:space="preserve">
+    <value>Héroe del Bar Local</value>
+  </data>
+  <data name="DartsBot10" xml:space="preserve">
+    <value>Bonita</value>
+  </data>
+  <data name="DartsBot11" xml:space="preserve">
+    <value>Campeón del Club de Dardos</value>
+  </data>
+  <data name="DartsBot12" xml:space="preserve">
+    <value>Ojo de Halcón</value>
+  </data>
+  <data name="DartsBot13" xml:space="preserve">
+    <value>Robin Hood</value>
+  </data>
+  <data name="DartsBot14" xml:space="preserve">
+    <value>Flecha Verde</value>
+  </data>
+  <data name="DartsBot15" xml:space="preserve">
+    <value>Campeón de la Ciudad</value>
+  </data>
+  <data name="DartsBot16" xml:space="preserve">
+    <value>Campeón Regional</value>
+  </data>
+  <data name="DartsBot17" xml:space="preserve">
+    <value>Campeón Nacional</value>
+  </data>
+  <data name="DartsBot18" xml:space="preserve">
+    <value>Fallon Sherrock</value>
+  </data>
+  <data name="DartsBot19" xml:space="preserve">
+    <value>Dimitri van den Bergh</value>
+  </data>
+  <data name="DartsBot20" xml:space="preserve">
+    <value>Luke Littler</value>
+  </data>
+  <data name="SelectGameViewModel_AddBot" xml:space="preserve">
+    <value>Agregar bot</value>
+  </data>
+	<data name="PlayerListViewModel_RemoveConfirmation_Title" xml:space="preserve">
+  <value>¿Está seguro?</value>
 </data>
-	<data name="MainPage_HeaderText" xml:space="preserve">
-  <value>¿Qué te gustaría hacer?</value>
+	<data name="PlayerListViewModel_RemoveConfirmation_Text" xml:space="preserve">
+  <value>Eliminar a este jugador eliminará permanentemente todos sus partidos jugados de las estadísticas.</value>
 </data>
-	<data name="MainPage_NewGame" xml:space="preserve">
-  <value>Nuevo juego</value>
-</data>
-	<data name="MainPage_Statistics" xml:space="preserve">
-  <value>Estadísticas</value>
-</data>
-	<data name="MainPage_Training" xml:space="preserve">
-  <value>Entrenamiento</value>
-</data>
-	<data name="MainViewModel_SelectPlayer" xml:space="preserve">
-  <value>Seleccionar jugador</value>
-</data>
-	<data name="MasterIn" xml:space="preserve">
-  <value>Maestro entrada</value>
-</data>
-	<data name="MasterOut" xml:space="preserve">
-  <value>Maestro salida</value>
-</data>
-	<data name="Off" xml:space="preserve">
-  <value>Apagar</value>
-</data>
-	<data name="On" xml:space="preserve">
-  <value>Encender</value>
-</data>
-	<data name="Player" xml:space="preserve">
-  <value>Jugador</value>
-</data>
-	<data name="PlayerListViewModel_NewPlayer_PlaceHolder" xml:space="preserve">
-  <value>Joe</value>
-</data>
-	<data name="PlayerListViewModel_NewPlayer_Text" xml:space="preserve">
-  <value>Agregar nuevo jugador</value>
-</data>
-	<data name="PlayerListViewModel_NewPlayer_Title" xml:space="preserve">
-  <value>Nuevo jugador</value>
-</data>
-	<data name="PlayerListViewModel_WrongName_Text" xml:space="preserve">
-  <value>Ya existe un jugador con este nombre</value>
-</data>
-	<data name="PlayerListViewModel_WrongName_Title" xml:space="preserve">
-  <value>Nombre incorrecto</value>
-</data>
-	<data name="PlayerListView_Add" xml:space="preserve">
-  <value>Agregar nuevo jugador</value>
-</data>
-	<data name="PlayerListView_Remove" xml:space="preserve">
-  <value>Eliminar jugador</value>
-</data>
-	<data name="PlayerListView_Title" xml:space="preserve">
-  <value>Jugadores</value>
-</data>
-	<data name="Practice121View_Checkout" xml:space="preserve">
-  <value>Checkout</value>
-</data>
-	<data name="Practice121View_Checkpoint" xml:space="preserve">
-  <value>Punto de control</value>
-</data>
-	<data name="Practice121View_Round" xml:space="preserve">
-  <value>Ronda</value>
-</data>
-	<data name="Practice121View_Score" xml:space="preserve">
-  <value>Puntuación</value>
-</data>
-	<data name="ScoringPracticeViewModel_Congratulations" xml:space="preserve">
-  <value>¡Felicidades!</value>
-</data>
-	<data name="ScoringPracticeViewModel_Double" xml:space="preserve">
-  <value>Doble</value>
-</data>
-	<data name="ScoringPracticeViewModel_FinishedTraining" xml:space="preserve">
-  <value>¡Has terminado el entrenamiento!</value>
-</data>
-	<data name="ScoringPracticeViewModel_Sector" xml:space="preserve">
-  <value>Sector</value>
-</data>
-	<data name="ScoringPracticeViewModel_Single" xml:space="preserve">
-  <value>Sencillo</value>
-</data>
-	<data name="ScoringPracticeViewModel_Triple" xml:space="preserve">
-  <value>Tríplice</value>
-</data>
-	<data name="ScoringPracticeView_Doubles" xml:space="preserve">
-  <value>Dobles: </value>
-</data>
-	<data name="ScoringPracticeView_Misses" xml:space="preserve">
-  <value>Errores: </value>
-</data>
-	<data name="ScoringPracticeView_Sectors" xml:space="preserve">
-  <value>Sectores: </value>
-</data>
-	<data name="ScoringPracticeView_Trebles" xml:space="preserve">
-  <value>Triples: </value>
-</data>
-	<data name="SelectGameViewModel_AddPlayer" xml:space="preserve">
-  <value>Agregar jugador</value>
-</data>
-	<data name="SelectGameView_Legs" xml:space="preserve">
-  <value>Legs</value>
-</data>
-	<data name="SelectGameView_Points" xml:space="preserve">
-  <value>Puntos</value>
-</data>
-	<data name="SelectGameView_Sets" xml:space="preserve">
-  <value>Sets</value>
-</data>
-	<data name="SelectGameView_Start" xml:space="preserve">
-  <value>Iniciar</value>
-</data>
-	<data name="SelectTrainingView_Doubles" xml:space="preserve">
-  <value>Dobles</value>
-</data>
-	<data name="SelectTrainingView_HeaderText" xml:space="preserve">
-  <value>¿Qué te gustaría practicar?</value>
-</data>
-	<data name="SelectTrainingView_Scoring" xml:space="preserve">
-  <value>Puntuación</value>
-</data>
-	<data name="StraightIn" xml:space="preserve">
-  <value>Entrada directa</value>
-</data>
-	<data name="StraightOut" xml:space="preserve">
-  <value>Salida directa</value>
-</data>
-	<data name="X01GameViewModel_CheckoutDartsUsed" xml:space="preserve">
-  <value>Checkout darts usados</value>
-</data>
-	<data name="X01GameViewModel_DartsUsed" xml:space="preserve">
-  <value>Dados usados</value>
-</data>
-	<data name="X01GameViewModel_WrongScorePopup_Text" xml:space="preserve">
-  <value>Esta puntuación no es válida</value>
-</data>
-	<data name="X01GameViewModel_WrongScorePopup_Title" xml:space="preserve">
-  <value>Puntuación incorrecta</value>
-</data>
-	<data name="X01StatisticsViewModel_3DartAverage" xml:space="preserve">
-  <value>Promedio de 3 dardos</value>
-</data>
-	<data name="X01StatisticsViewModel_9DartAverage" xml:space="preserve">
-  <value>Promedio de los primeros 9 dardos</value>
-</data>
-	<data name="X01StatisticsViewModel_BestLeg" xml:space="preserve">
-  <value>Mejor pierna</value>
-</data>
-	<data name="X01StatisticsViewModel_HighestCheckout" xml:space="preserve">
-  <value>Mayor checkout</value>
-</data>
-	<data name="X01StatisticsViewModel_HighestScore" xml:space="preserve">
-  <value>Puntuación más alta</value>
-</data>
-	<data name="X01StatisticsViewModel_LegsWon" xml:space="preserve">
-  <value>Legs ganadas</value>
-</data>
-	<data name="X01StatisticsViewModel_Monthly" xml:space="preserve">
-  <value>Mensual</value>
-</data>
-	<data name="X01StatisticsViewModel_Total" xml:space="preserve">
-  <value>Total</value>
-</data>
-	<data name="X01StatisticsViewModel_Weekly" xml:space="preserve">
-  <value>Semanal</value>
-</data>
-	<data name="X01StatisticsView_BigThrows" xml:space="preserve">
-  <value>Grandes lanzamientos</value>
-</data>
-	<data name="X01StatisticsView_Checkout" xml:space="preserve">
-  <value>Checkout</value>
-</data>
+
 </root>

@@ -336,4 +336,73 @@
   <data name="X01StatisticsView_Checkout" xml:space="preserve">
     <value>Checkout</value>
   </data>
+  <data name="DartsBot1" xml:space="preserve">
+    <value>Whiny Kid</value>
+  </data>
+  <data name="DartsBot2" xml:space="preserve">
+    <value>Arthritic Grandma</value>
+  </data>
+  <data name="DartsBot3" xml:space="preserve">
+    <value>Drunken Homeless Guy</value>
+  </data>
+  <data name="DartsBot4" xml:space="preserve">
+    <value>Double-Zero Daniel</value>
+  </data>
+  <data name="DartsBot5" xml:space="preserve">
+    <value>Board-Breaking Billie</value>
+  </data>
+  <data name="DartsBot6" xml:space="preserve">
+    <value>Throwing Ted</value>
+  </data>
+  <data name="DartsBot7" xml:space="preserve">
+    <value>Dart Hall Cleaner</value>
+  </data>
+  <data name="DartsBot8" xml:space="preserve">
+    <value>Darts Shop Owner</value>
+  </data>
+  <data name="DartsBot9" xml:space="preserve">
+    <value>Local Pub Hero</value>
+  </data>
+  <data name="DartsBot10" xml:space="preserve">
+    <value>Bob</value>
+  </data>
+  <data name="DartsBot11" xml:space="preserve">
+    <value>Darts Club Champion</value>
+  </data>
+  <data name="DartsBot12" xml:space="preserve">
+    <value>Hawk Eye</value>
+  </data>
+  <data name="DartsBot13" xml:space="preserve">
+    <value>Robin Hood</value>
+  </data>
+  <data name="DartsBot14" xml:space="preserve">
+    <value>Green Arrow</value>
+  </data>
+  <data name="DartsBot15" xml:space="preserve">
+    <value>City Champion</value>
+  </data>
+  <data name="DartsBot16" xml:space="preserve">
+    <value>Regional Champion</value>
+  </data>
+  <data name="DartsBot17" xml:space="preserve">
+    <value>National Champion</value>
+  </data>
+  <data name="DartsBot18" xml:space="preserve">
+    <value>Fallon Sherrock</value>
+  </data>
+  <data name="DartsBot19" xml:space="preserve">
+    <value>Dimitri van den Bergh</value>
+  </data>
+  <data name="DartsBot20" xml:space="preserve">
+    <value>Luke Littler</value>
+  </data>
+  <data name="SelectGameViewModel_AddBot" xml:space="preserve">
+    <value>Add bot</value>
+  </data>
+  <data name="PlayerListViewModel_RemoveConfirmation_Title" xml:space="preserve">
+    <value>Are you sure?</value>
+  </data>
+  <data name="PlayerListViewModel_RemoveConfirmation_Text" xml:space="preserve">
+    <value>Removing this player will permanently delete all their played matches from the statistics.</value>
+  </data>
 </root>

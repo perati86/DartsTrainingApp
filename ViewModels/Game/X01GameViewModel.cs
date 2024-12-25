@@ -273,6 +273,7 @@ namespace DartsApp.ViewModels
             {
                 PlayerList[CurrentPlayerIndex].Sets++;
 
+                //TODO: statistics page when match is over
                 IsMatchOver = true;
                 setEnded = true;
             }
@@ -463,6 +464,7 @@ namespace DartsApp.ViewModels
         {
             try
             {
+                //TODO: Keyboard lock on bot throw
                 IsBotThrowing = true;
 
                 var bot = PlayerList[CurrentPlayerIndex] as X01DartsBot;

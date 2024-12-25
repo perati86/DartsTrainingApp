@@ -44,17 +44,17 @@ public partial class CricketScoreboard : ContentView
         {
             ITranslator _translator = IPlatformApplication.Current?.Services.GetService<ITranslator>();
 
-            scoreBoard.container.RowDefinitions.Add(new RowDefinition(GridLength.Star));
+            scoreBoard.container.RowDefinitions.Add(new RowDefinition(40));
 
             scoreBoard.container.ColumnDefinitions = new ColumnDefinitionCollection(
+                new ColumnDefinition(GridLength.Star),
                 new ColumnDefinition(GridLength.Auto),
-                new ColumnDefinition(GridLength.Star),
-                new ColumnDefinition(GridLength.Star),
-                new ColumnDefinition(GridLength.Star),
-                new ColumnDefinition(GridLength.Star),
-                new ColumnDefinition(GridLength.Star),
-                new ColumnDefinition(GridLength.Star),
-                new ColumnDefinition(GridLength.Star),
+                new ColumnDefinition(GridLength.Auto),
+                new ColumnDefinition(GridLength.Auto),
+                new ColumnDefinition(GridLength.Auto),
+                new ColumnDefinition(GridLength.Auto),
+                new ColumnDefinition(GridLength.Auto),
+                new ColumnDefinition(GridLength.Auto),
                 new ColumnDefinition(GridLength.Auto));
 
             AddGridBackgrounds(scoreBoard);
@@ -63,7 +63,6 @@ public partial class CricketScoreboard : ContentView
 
             playerLabel.HorizontalTextAlignment = TextAlignment.Start;
             playerLabel.HorizontalOptions = LayoutOptions.Start;
-            playerLabel.Padding = new Thickness(10, 0);
 
             AddViewToGrid(scoreBoard.container, playerLabel, 0, 0);
 
@@ -74,13 +73,12 @@ public partial class CricketScoreboard : ContentView
             }
 
             var pointsTitleLabel = CreateHeaderLabel(_translator?.GetTranslation("SelectGameView_Points"));
-            pointsTitleLabel.Padding = 5;
 
             AddViewToGrid(scoreBoard.container, pointsTitleLabel, 0, scoreBoard.Sectors.Count() + 1);
 
             for (int i = 0; i < scoreBoard.Players.Count(); i++)
             {
-                scoreBoard.container.RowDefinitions.Add(new RowDefinition(GridLength.Star));
+                scoreBoard.container.RowDefinitions.Add(new RowDefinition(GridLength.Auto));
 
                 var currentPlayer = scoreBoard.Players.ElementAt(i);
 
@@ -122,6 +120,7 @@ public partial class CricketScoreboard : ContentView
         {
             Text = text,
             FontSize = 14,
+            Padding = new Thickness(5, 0),
             TextColor = Colors.Black,
             FontFamily = "OpenSans-Semibold",
             HorizontalOptions = LayoutOptions.Center,

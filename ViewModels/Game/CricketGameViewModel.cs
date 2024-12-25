@@ -60,6 +60,14 @@ namespace DartsApp.ViewModels
 
         public string CurrentPlayerName => PlayerList?.Any() == true ? PlayerList[CurrentPlayerIndex].Name : "";
 
+        public override void OnViewDisapearing()
+        {
+            IsMatchOver = true;
+
+            base.OnViewDisapearing();
+        }
+
+
         public CricketGameViewModel(ITranslator translator, DbDataContext dbDataContext)
         {
             _translator = translator;
@@ -110,7 +118,9 @@ namespace DartsApp.ViewModels
             }
 
             Random rn = new Random();
+
             int[] sectorIndexes = new int[6];
+            Sectors = new string[7];
 
             for (int i = 0; i < 6; i++)
             {
@@ -123,6 +133,12 @@ namespace DartsApp.ViewModels
                 }
 
                 sectorIndexes[i] = number;
+            }
+
+            sectorIndexes = sectorIndexes.OrderDescending().ToArray();
+
+            for (int i = 0; i < sectorIndexes.Length; i++)
+            {
                 Sectors[i] = sectorIndexes[i].ToString();
             }
 
@@ -153,6 +169,7 @@ namespace DartsApp.ViewModels
             }
         }
 
+        //TODO: Handle point versions of the game
         [RelayCommand]
         private async Task ScoreSubmitted()
         {
@@ -500,13 +517,21 @@ namespace DartsApp.ViewModels
                     {
                         scoreable = true;
                         shouldClose = false;
-                    }
+                    }    
+                }
 
-                    //Gets the score difference to the best player, who is not the current bot
-                    if (scoreDifference == int.MinValue)
-                        scoreDifference = PlayerList[CurrentPlayerIndex].CurrentPoints - PlayerList.
+                //Gets the score difference to the best player, who is not the current bot
+                scoreDifference = PlayerList[CurrentPlayerIndex].CurrentPoints - PlayerList.
                             Where((value, index) => index != CurrentPlayerIndex).
                             OrderByDescending((x) => x.CurrentPoints).First().CurrentPoints;
+
+                //Adds the currently gained points to the difference
+                for (int j = 0; j < CurrentPlayerScores.Count - 1; j++)
+                {
+                    int marks = Scores[CurrentPlayerIndex][j] + CurrentPlayerScores[j];
+
+                    if (marks > 3)
+                        scoreDifference += (marks - 3) * int.Parse(Sectors[j]);
                 }
 
                 if (int.TryParse(Sectors[i], out int sector) == false)
