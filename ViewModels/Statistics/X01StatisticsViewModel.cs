@@ -103,39 +103,49 @@ namespace DartsApp.ViewModels
 
         private void UpdateStatistics()
         {
-            if (Legs?.Any() != true)
-                return;
-
-            LegValues[0] = Legs.Count.ToString();
-            LegValues[1] = Legs.Where(x => x.LegWon).Count().ToString();
-            LegValues[2] = Math.Round(double.Parse(LegValues[1]) * 100 / Legs.Count, 2).ToString() + "%";
-
-            var maxScore = Legs.Max(x => x.HighestScoreThisLeg);
-
-            ScoringValues[0] = Math.Round((double)Legs.Sum(x => x.First9DartsPoints) / (Legs.Count * 3), 2).ToString();
-            ScoringValues[1] = Math.Round(Legs.Sum(x => (double)x.Points) / Legs.Sum(x => x.DartsThrown) * 3 , 2).ToString();
-            ScoringValues[2] = maxScore.ToString();
-            ScoringValues[2] += $" ({Legs.Where(x => x.HighestScoreThisLeg == maxScore).Sum(x => x.HighestScoreCountThisLeg)})";
-
-            for (int i = 0; i < Legs[Legs.Count - 1].HighThrowCounts.Length; i++)
+            try
             {
-                double sum = Legs.Sum(x => x.HighThrowCounts[i]);
+                if (Legs?.Any() != true)
+                    return;
 
-                PointValues[i] = sum.ToString();
+                int legsWon = Legs.Where(x => x.LegWon).Count();
 
-                if (sum > 9)
-                    PointValues[i] += $" ({Math.Round(sum * 100 / (Legs.Sum(x => x.DartsThrown) / 3))}%)";
+                LegValues[0] = Legs.Count.ToString();
+                LegValues[1] = legsWon.ToString();
+                LegValues[2] = Math.Round(double.Parse(LegValues[1]) * 100 / Legs.Count, 2).ToString() + "%";
+
+                var maxScore = Legs.Max(x => x.HighestScoreThisLeg);
+
+                ScoringValues[0] = Math.Round((double)Legs.Sum(x => x.First9DartsPoints) / (Legs.Count * 3), 2).ToString();
+                ScoringValues[1] = Math.Round(Legs.Sum(x => (double)x.Points) / Legs.Sum(x => x.DartsThrown) * 3, 2).ToString();
+                ScoringValues[2] = maxScore.ToString();
+                ScoringValues[2] += $" ({Legs.Where(x => x.HighestScoreThisLeg == maxScore).Sum(x => x.HighestScoreCountThisLeg)})";
+
+                for (int i = 0; i < Legs[Legs.Count - 1].HighThrowCounts.Length; i++)
+                {
+                    double sum = Legs.Sum(x => x.HighThrowCounts[i]);
+
+                    PointValues[i] = sum.ToString();
+
+                    if (sum > 9)
+                        PointValues[i] += $" ({Math.Round(sum * 100 / (Legs.Sum(x => x.DartsThrown) / 3))}%)";
+                }
+
+                CheckoutValues[0] = legsWon > 0 ? Legs.Where(x => x.LegWon).Max(x => x.Checkout).ToString() : "0";
+                CheckoutValues[1] = Math.Round((double)Legs.Where(x => x.LegWon).Count() * 100 / Legs.Sum(x => x.CheckOutDartsThrown), 2).ToString() + "%";
+                CheckoutValues[2] = legsWon > 0 ? Legs.Where(x => x.LegWon).Min(x => x.DartsThrown).ToString() : "0";
+
+                //To notify property changed
+                LegValues = LegValues.ToArray().ToList();
+                ScoringValues = ScoringValues.ToArray().ToList();
+                PointValues = PointValues.ToArray().ToList();
+                CheckoutValues = CheckoutValues.ToArray().ToList();
             }
 
-            CheckoutValues[0] = Legs.Where(x => x.LegWon).Max(x => x.Checkout).ToString();
-            CheckoutValues[1] = Math.Round((double)Legs.Where(x => x.LegWon).Count() * 100 / Legs.Sum(x => x.CheckOutDartsThrown), 2).ToString() + "%";
-            CheckoutValues[2] = Legs.Where((x) => x.LegWon).Min(x => x.DartsThrown).ToString();
-
-            //To notify property changed
-            LegValues = LegValues.ToArray().ToList();
-            ScoringValues = ScoringValues.ToArray().ToList();
-            PointValues = PointValues.ToArray().ToList();
-            CheckoutValues = CheckoutValues.ToArray().ToList();
+            catch (Exception ex)
+            {
+                Debug.WriteLine(ex.Message);
+            }
         }
     }
 }
